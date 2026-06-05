@@ -1,24 +1,24 @@
-﻿/* ============================================================
-   NOZHA CONCEPT â€” Panier (localStorage)
-   Gestion des commandes cÃ´tÃ© client
+/* ============================================================
+   NOZHA CONCEPT — Panier (localStorage)
+   Gestion des commandes côté client
    ============================================================ */
 
 const PANIER_KEY = 'nozha_panier';
 const WA_NUMBER  = '212612653622';
 
-/* â”€â”€ Structure d'un article â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€
+/* ── Structure d'un article ──────────────────────────────────
 {
   id:       'prod_001',
-  nom:      'Caftan Royal BrodÃ©',
+  nom:      'Caftan Royal Brodé',
   couleur:  'Bordeaux Royal',
   taille:   'M',
   prix:     2800,
   image:    'https://...',
   quantite: 1
 }
-â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€â”€ */
+──────────────────────────────────────────────────────────── */
 
-/* RÃ©cupÃ¨re le panier depuis localStorage */
+/* Récupère le panier depuis localStorage */
 function getPanier() {
   try {
     return JSON.parse(localStorage.getItem(PANIER_KEY)) || [];
@@ -61,7 +61,7 @@ function removeFromPanier(index) {
   return panier;
 }
 
-/* Met Ã  jour la quantitÃ© */
+/* Met à jour la quantité */
 function updateQuantite(index, quantite) {
   const panier = getPanier();
   if (quantite <= 0) {
@@ -88,13 +88,13 @@ function getCount() {
   return getPanier().reduce((sum, it) => sum + it.quantite, 0);
 }
 
-/* â”€â”€ Event custom â”€â”€ */
+/* ── Event custom ── */
 function dispatchPanierEvent(items) {
   const event = new CustomEvent('panierUpdated', { detail: { items, total: getTotal(), count: getCount() } });
   window.dispatchEvent(event);
 }
 
-/* â”€â”€ Mise Ã  jour badge navbar â”€â”€ */
+/* ── Mise à jour badge navbar ── */
 function updateBadge() {
   const count = getCount();
   const badges = document.querySelectorAll('.cart-badge');
@@ -108,7 +108,7 @@ function updateBadge() {
   });
 }
 
-/* â”€â”€ Toast notification â”€â”€ */
+/* ── Toast notification ── */
 function showToast(nom) {
   let toast = document.getElementById('panier-toast');
   if (!toast) {
@@ -137,8 +137,8 @@ function showToast(nom) {
 
   const lang = window.NozhaI18n ? window.NozhaI18n.currentLang() : 'fr';
   toast.innerHTML = lang === 'ar'
-    ? `<span style="color:var(--or)">âœ“</span> Ø£Ø¶ÙŠÙ Ø¥Ù„Ù‰ Ø·Ù„Ø¨ÙŠØªÙƒ`
-    : `<span style="color:var(--or)">âœ“</span> AjoutÃ© Ã  votre commande`;
+    ? `<span style="color:var(--or)">✓</span> أضيف إلى طلبيتك`
+    : `<span style="color:var(--or)">✓</span> Ajouté à votre commande`;
 
   toast.style.opacity = '1';
   toast.style.transform = 'translateY(0)';
@@ -150,7 +150,7 @@ function showToast(nom) {
   }, 2800);
 }
 
-/* â”€â”€ GÃ©nÃ©ration message WhatsApp â”€â”€ */
+/* ── Génération message WhatsApp ── */
 function buildWAMessage(items, total) {
   const lang = window.NozhaI18n ? window.NozhaI18n.currentLang() : 'fr';
   const t = window.NozhaI18n ? window.NozhaI18n.translations[lang] : null;
@@ -164,9 +164,9 @@ function buildWAMessage(items, total) {
   }
 
   const lines = items.map((it, i) =>
-    `${i+1}. ${it.nom}${it.couleur ? ` â€” ${it.couleur}` : ''} â€” ${it.taille}`
+    `${i+1}. ${it.nom}${it.couleur ? ` — ${it.couleur}` : ''} — ${it.taille}`
   ).join('\n');
-  return `Bonjour, j'espÃ¨re que tout va bien ðŸŒ¹\nEst-ce que je peux me renseigner sur ces articles svp :\n\n${lines}`;
+  return `Bonjour, j'espère que tout va bien 🌹\nEst-ce que je peux me renseigner sur ces articles svp :\n\n${lines}`;
 }
 
 function buildWAProductMessage(nom, couleur, taille, perso) {
@@ -177,7 +177,7 @@ function buildWAProductMessage(nom, couleur, taille, perso) {
     return t.wa_product(nom, couleur, taille, perso);
   }
 
-  return `Bonjour ! Je souhaite commander :\n*${nom}*\n- Couleur : ${couleur}\n- Taille : ${taille}${perso ? `\n- Personnalisation : ${perso}` : ''}\n\nMerci de confirmer la disponibilitÃ©. ðŸŒ¹`;
+  return `Bonjour ! Je souhaite commander :\n*${nom}*\n- Couleur : ${couleur}\n- Taille : ${taille}${perso ? `\n- Personnalisation : ${perso}` : ''}\n\nMerci de confirmer la disponibilité. 🌹`;
 }
 
 /* Construit l'URL WhatsApp */
@@ -185,7 +185,7 @@ function buildWAUrl(message) {
   return `https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(message)}`;
 }
 
-/* â”€â”€ Rendu de la page Ma Commande â”€â”€ */
+/* ── Rendu de la page Ma Commande ── */
 function renderCommande() {
   const container = document.getElementById('commande-items');
   const emptyState = document.getElementById('commande-empty');
@@ -222,7 +222,7 @@ function renderCommande() {
         <div class="commande-item-price">${it.prix.toLocaleString('fr-MA')} MAD</div>
         <div style="display:flex;align-items:center;gap:8px;margin-top:8px;">
           <button class="qty-btn" onclick="changeQty(${idx}, -1)"
-            style="width:28px;height:28px;border:1px solid rgba(201,169,110,0.2);color:var(--blanc);font-size:16px;display:flex;align-items:center;justify-content:center;cursor:pointer;background:none;">âˆ’</button>
+            style="width:28px;height:28px;border:1px solid rgba(201,169,110,0.2);color:var(--blanc);font-size:16px;display:flex;align-items:center;justify-content:center;cursor:pointer;background:none;">−</button>
           <span style="font-size:14px;min-width:20px;text-align:center">${it.quantite}</span>
           <button class="qty-btn" onclick="changeQty(${idx}, 1)"
             style="width:28px;height:28px;border:1px solid rgba(201,169,110,0.2);color:var(--blanc);font-size:16px;display:flex;align-items:center;justify-content:center;cursor:pointer;background:none;">+</button>
@@ -236,12 +236,12 @@ function renderCommande() {
     </article>
   `).join('');
 
-  /* RÃ©cap lignes */
+  /* Récap lignes */
   const recapLines = document.getElementById('recap-lines');
   if (recapLines) {
     recapLines.innerHTML = panier.map(it => `
       <div class="recap-line">
-        <span>${it.nom} Ã—${it.quantite}</span>
+        <span>${it.nom} ×${it.quantite}</span>
         <span>${(it.prix * it.quantite).toLocaleString('fr-MA')} MAD</span>
       </div>
     `).join('');
@@ -255,7 +255,7 @@ function updateRecapTotal(total) {
   if (el) el.textContent = `${total.toLocaleString('fr-MA')} MAD`;
 }
 
-/* Fonctions globales appelÃ©es depuis le HTML inline */
+/* Fonctions globales appelées depuis le HTML inline */
 window.supprimerArticle = function(idx) {
   removeFromPanier(idx);
   renderCommande();
@@ -277,7 +277,7 @@ window.envoyerCommandeWA = function() {
   window.open(buildWAUrl(msg), '_blank');
 };
 
-/* â”€â”€ Init â”€â”€ */
+/* ── Init ── */
 window.addEventListener('DOMContentLoaded', () => {
   updateBadge();
   renderCommande();
@@ -287,7 +287,7 @@ window.addEventListener('panierUpdated', () => {
   updateBadge();
 });
 
-/* â”€â”€ Export global â”€â”€ */
+/* ── Export global ── */
 window.NozhaCart = {
   addToPanier,
   removeFromPanier,

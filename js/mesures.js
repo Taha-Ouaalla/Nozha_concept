@@ -1,5 +1,5 @@
-﻿/* ============================================================
-   NOZHA CONCEPT â€” Calculateur de tailles + Guide mesures
+/* ============================================================
+   NOZHA CONCEPT — Calculateur de tailles + Guide mesures
    ============================================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -9,7 +9,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMesureWA();
 });
 
-/* â”€â”€ Tableau des tailles (cm) â”€â”€ */
+/* ── Tableau des tailles (cm) ── */
 const SIZE_TABLE = [
   { taille: 'XS',  poitrine: [80, 84],  tour_taille: [60, 64],  hanches: [84, 88],  longueur: 135 },
   { taille: 'S',   poitrine: [84, 88],  tour_taille: [64, 68],  hanches: [88, 92],  longueur: 137 },
@@ -45,7 +45,7 @@ function initMesureAccordion() {
 }
 
 /* ============================================================
-   CALCULATEUR DE TAILLE EN TEMPS RÃ‰EL
+   CALCULATEUR DE TAILLE EN TEMPS RÉEL
    ============================================================ */
 function initSizeCalculator() {
   const inputs = {
@@ -72,7 +72,7 @@ function initSizeCalculator() {
     const size = findSize(p, t, h);
 
     if (resultEl) {
-      resultEl.textContent = size || 'â€”';
+      resultEl.textContent = size || '—';
       if (size === 'Sur mesure') {
         resultEl.style.color = 'var(--bordeaux-light)';
       } else {
@@ -82,7 +82,7 @@ function initSizeCalculator() {
 
     if (resultBox) resultBox.style.display = 'flex';
 
-    /* Met Ã  jour le lien WhatsApp */
+    /* Met à jour le lien WhatsApp */
     updateWAMesures(p, t, h, size);
   };
 
@@ -90,7 +90,7 @@ function initSizeCalculator() {
 }
 
 function findSize(p, t, h) {
-  /* Cherche la taille qui correspond Ã  au moins 2 des 3 mesures */
+  /* Cherche la taille qui correspond à au moins 2 des 3 mesures */
   for (const row of SIZE_TABLE) {
     const matchP = !p || (p >= row.poitrine[0]    && p <= row.poitrine[1]);
     const matchT = !t || (t >= row.tour_taille[0] && t <= row.tour_taille[1]);
@@ -104,7 +104,7 @@ function findSize(p, t, h) {
     }
   }
 
-  /* Si toutes les mesures dÃ©passent XL â†’ sur mesure */
+  /* Si toutes les mesures dépassent XL → sur mesure */
   const maxP = SIZE_TABLE[SIZE_TABLE.length - 1].poitrine[1];
   const maxH = SIZE_TABLE[SIZE_TABLE.length - 1].hanches[1];
   if ((p && p > maxP) || (h && h > maxH)) {
@@ -123,9 +123,9 @@ function updateWAMesures(p, t, h, size) {
 
   let msg;
   if (tr && typeof tr.wa_mesures === 'function') {
-    msg = tr.wa_mesures(p || 'â€”', t || 'â€”', h || 'â€”');
+    msg = tr.wa_mesures(p || '—', t || '—', h || '—');
   } else {
-    msg = `Bonjour ! Voici mes mesures :\n- Poitrine: ${p||'â€”'} cm\n- Taille: ${t||'â€”'} cm\n- Hanches: ${h||'â€”'} cm\nTaille recommandÃ©e : ${size}\nJe souhaite commander sur mesure. Merci ! ðŸŒ¹`;
+    msg = `Bonjour ! Voici mes mesures :\n- Poitrine: ${p||'—'} cm\n- Taille: ${t||'—'} cm\n- Hanches: ${h||'—'} cm\nTaille recommandée : ${size}\nJe souhaite commander sur mesure. Merci ! 🌹`;
   }
 
   btn.onclick = () => {
@@ -134,7 +134,7 @@ function updateWAMesures(p, t, h, size) {
 }
 
 /* ============================================================
-   DIAGRAMME CORPS â€” Points de mesure animÃ©s
+   DIAGRAMME CORPS — Points de mesure animés
    ============================================================ */
 function initBodyDiagram() {
   const points = document.querySelectorAll('.measure-point');
@@ -173,13 +173,13 @@ function initMesureWA() {
   const btn = document.querySelector('[data-action="wa-mesures"]');
   if (!btn) return;
 
-  /* Message par dÃ©faut si calculateur pas encore rempli */
+  /* Message par défaut si calculateur pas encore rempli */
   btn.addEventListener('click', () => {
     const p = document.getElementById('calc-poitrine')?.value || '';
     const t = document.getElementById('calc-taille')?.value   || '';
     const h = document.getElementById('calc-hanches')?.value  || '';
 
-    const msg = `Bonjour ! Je souhaite commander sur mesure Nozha Concept.\nMes mesures :\n- Poitrine: ${p||'?'} cm\n- Taille: ${t||'?'} cm\n- Hanches: ${h||'?'} cm\nMerci ! ðŸŒ¹`;
+    const msg = `Bonjour ! Je souhaite commander sur mesure Nozha Concept.\nMes mesures :\n- Poitrine: ${p||'?'} cm\n- Taille: ${t||'?'} cm\n- Hanches: ${h||'?'} cm\nMerci ! 🌹`;
     const url = `https://wa.me/212612653622?text=${encodeURIComponent(msg)}`;
     window.open(url, '_blank');
   });

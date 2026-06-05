@@ -1,6 +1,6 @@
-﻿/* ============================================================
-   NOZHA CONCEPT â€” Logique page produit
-   Couleur Â· Taille Â· Personnalisation Â· Galerie Â· Commande
+/* ============================================================
+   NOZHA CONCEPT — Logique page produit
+   Couleur · Taille · Personnalisation · Galerie · Commande
    ============================================================ */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -14,7 +14,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initMesuresModal();
 });
 
-/* â”€â”€ Ã‰tat courant du produit â”€â”€ */
+/* ── État courant du produit ── */
 const state = {
   couleur:  '',
   taille:   '',
@@ -23,13 +23,13 @@ const state = {
 };
 
 /* ============================================================
-   SÃ‰LECTEUR COULEUR
+   SÉLECTEUR COULEUR
    ============================================================ */
 function initColorSelector() {
   const dots = document.querySelectorAll('.product-color');
   if (!dots.length) return;
 
-  /* SÃ©lection initiale */
+  /* Sélection initiale */
   const first = dots[0];
   selectColor(first);
 
@@ -44,7 +44,7 @@ function selectColor(dot) {
 
   state.couleur = dot.dataset.color || dot.getAttribute('title') || '';
 
-  /* Mise Ã  jour label */
+  /* Mise à jour label */
   const valueEl = document.querySelector('.selector-block[data-type="color"] .selector-value');
   if (valueEl) valueEl.textContent = state.couleur;
 
@@ -54,7 +54,7 @@ function selectColor(dot) {
 }
 
 /* ============================================================
-   SÃ‰LECTEUR TAILLE
+   SÉLECTEUR TAILLE
    ============================================================ */
 function initSizeSelector() {
   const sizes = document.querySelectorAll('.product-size');
@@ -96,7 +96,7 @@ function initPersonalisation() {
     if (sw) sw.classList.toggle('on', !isOpen);
   });
 
-  /* Met Ã  jour l'Ã©tat de personnalisation */
+  /* Met à jour l'état de personnalisation */
   panel.querySelectorAll('select, input').forEach(input => {
     input.addEventListener('change', updatePersoState);
   });
@@ -117,7 +117,7 @@ function updatePersoState() {
 }
 
 /* ============================================================
-   GALERIE â€” Thumbnails + Zoom hover
+   GALERIE — Thumbnails + Zoom hover
    ============================================================ */
 function initGallery() {
   const thumbs  = document.querySelectorAll('.gallery-thumb');
@@ -189,12 +189,12 @@ function initAccordion() {
       /* Ferme tous */
       document.querySelectorAll('.accordion-item').forEach(i => i.classList.remove('open'));
 
-      /* Ouvre celui-ci si pas dÃ©jÃ  ouvert */
+      /* Ouvre celui-ci si pas déjà ouvert */
       if (!isOpen) item.classList.add('open');
     });
   });
 
-  /* Ouvre le premier par dÃ©faut */
+  /* Ouvre le premier par défaut */
   const first = document.querySelector('.accordion-item');
   if (first) first.classList.add('open');
 }
@@ -207,14 +207,14 @@ function initProductWA() {
   if (!btn) return;
 
   btn.addEventListener('click', () => {
-    const nom     = document.querySelector('[data-product-name]')?.textContent || 'PiÃ¨ce Nozha Concept';
-    const couleur = state.couleur || 'Non sÃ©lectionnÃ©e';
-    const taille  = state.taille  || 'Non sÃ©lectionnÃ©e';
+    const nom     = document.querySelector('[data-product-name]')?.textContent || 'Pièce Nozha Concept';
+    const couleur = state.couleur || 'Non sélectionnée';
+    const taille  = state.taille  || 'Non sélectionnée';
     const perso   = state.perso   || '';
 
     const msg = window.NozhaCart
       ? window.NozhaCart.buildWAProductMessage(nom, couleur, taille, perso)
-      : `Bonjour ! Je souhaite commander : ${nom} â€” Couleur: ${couleur} â€” Taille: ${taille}`;
+      : `Bonjour ! Je souhaite commander : ${nom} — Couleur: ${couleur} — Taille: ${taille}`;
 
     const url = window.NozhaCart ? window.NozhaCart.buildWAUrl(msg) : `https://wa.me/212612653622?text=${encodeURIComponent(msg)}`;
     window.open(url, '_blank');
@@ -222,14 +222,14 @@ function initProductWA() {
 }
 
 /* ============================================================
-   BOUTON "Ajouter Ã  ma commande"
+   BOUTON "Ajouter à ma commande"
    ============================================================ */
 function initAddToCart() {
   const btn = document.querySelector('[data-action="add-to-cart"]');
   if (!btn || !window.NozhaCart) return;
 
   btn.addEventListener('click', () => {
-    const nom   = document.querySelector('[data-product-name]')?.textContent  || 'PiÃ¨ce Nozha Concept';
+    const nom   = document.querySelector('[data-product-name]')?.textContent  || 'Pièce Nozha Concept';
     const prix  = parseInt(document.querySelector('[data-product-price]')?.dataset.price || '0', 10);
     const img   = document.querySelector('.gallery-main img')?.src || '';
     const id    = document.querySelector('[data-product-id]')?.dataset.productId || `prod_${Date.now()}`;
@@ -250,10 +250,10 @@ function initAddToCart() {
     });
 
     /* Feedback visuel */
-    btn.textContent = 'âœ“ AjoutÃ© !';
+    btn.textContent = '✓ Ajouté !';
     btn.style.background = 'rgba(201,169,110,0.2)';
     setTimeout(() => {
-      btn.textContent = btn.dataset.originalText || 'Ajouter Ã  ma commande';
+      btn.textContent = btn.dataset.originalText || 'Ajouter à ma commande';
       btn.style.background = '';
     }, 2000);
   });

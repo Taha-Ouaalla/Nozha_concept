@@ -1,12 +1,12 @@
-﻿/* ============================================================
-   NOZHA CONCEPT — Main JS
-   Navigation · Curseur · GSAP ScrollTrigger · Interactions
+/* ============================================================
+   NOZHA CONCEPT � Main JS
+   Navigation � Curseur � GSAP ScrollTrigger � Interactions
    ============================================================ */
 
 /* Attend GSAP et DOM */
 document.addEventListener('DOMContentLoaded', () => {
 
-  /* ── GSAP plugins ── */
+  /* -- GSAP plugins -- */
   if (typeof gsap !== 'undefined' && typeof ScrollTrigger !== 'undefined') {
     gsap.registerPlugin(ScrollTrigger);
   }
@@ -29,7 +29,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 /* ============================================================
-   LOADER — Animation fil de broderie
+   LOADER � Animation fil de broderie
    ============================================================ */
 function initLoader() {
   const loader = document.getElementById('loader');
@@ -60,10 +60,10 @@ function initLoader() {
 }
 
 /* ============================================================
-   CURSEUR PERSONNALISÉ
+   CURSEUR PERSONNALIS�
    ============================================================ */
 function initCursor() {
-  /* Désactivé sur touch/mobile */
+  /* D�sactiv� sur touch/mobile */
   if ('ontouchstart' in window || navigator.maxTouchPoints > 1) return;
   if (window.innerWidth <= 768) return;
 
@@ -72,11 +72,11 @@ function initCursor() {
   const label  = document.querySelector('.cursor-label');
   if (!cursor || !trail) return;
 
-  /* Coordonnées courantes */
+  /* Coordonn�es courantes */
   let mx = -500, my = -500;   /* position souris */
   let tx = -500, ty = -500;   /* position trail (lag) */
 
-  /* ── Positionnement via transform pur (GPU, sans left/top) ── */
+  /* -- Positionnement via transform pur (GPU, sans left/top) -- */
   function setCursor(x, y) {
     cursor.style.transform = `translate(${x - 5}px, ${y - 5}px)`;
   }
@@ -101,14 +101,14 @@ function initCursor() {
     requestAnimationFrame(loop);
   })();
 
-  /* ── Hover : zones visuelles → VOIR ── */
+  /* -- Hover : zones visuelles ? VOIR -- */
   const visualZones = '.product-card-image, .category-card, .atelier-photo, .insta-item, .gallery-main, .lookbook-image, .page-hero-bg';
   document.querySelectorAll(visualZones).forEach(el => {
     el.addEventListener('mouseenter', () => {
       cursor.classList.add('hover');
       trail.classList.add('hover');
       if (label) {
-        label.textContent = window.NozhaI18n?.currentLang() === 'ar' ? 'عرض' : 'VOIR';
+        label.textContent = window.NozhaI18n?.currentLang() === 'ar' ? '???' : 'VOIR';
         label.classList.add('visible');
       }
     });
@@ -119,7 +119,7 @@ function initCursor() {
     });
   });
 
-  /* ── Hover : liens et boutons → point comprimé ── */
+  /* -- Hover : liens et boutons ? point comprim� -- */
   document.querySelectorAll('a, button').forEach(el => {
     el.addEventListener('mouseenter', () => { cursor.classList.add('hover'); if (label) label.classList.remove('visible'); });
     el.addEventListener('mouseleave', () => cursor.classList.remove('hover'));
@@ -127,7 +127,7 @@ function initCursor() {
 }
 
 /* ============================================================
-   NAVBAR — Shrink au scroll, highlight actif
+   NAVBAR � Shrink au scroll, highlight actif
    ============================================================ */
 function initNavbar() {
   const navTop = document.querySelector('.navbar-top');
@@ -148,7 +148,7 @@ function initNavbar() {
 }
 
 /* ============================================================
-   TUBELIGHT — Indicateur catégorie animé
+   TUBELIGHT � Indicateur cat�gorie anim�
    ============================================================ */
 function initTubelight() {
   const pill  = document.querySelector('.tubelight-pill');
@@ -198,7 +198,7 @@ function initTubelight() {
 }
 
 /* ============================================================
-   BURGER MENU — Drawer mobile
+   BURGER MENU � Drawer mobile
    ============================================================ */
 function initBurgerMenu() {
   const burger  = document.querySelector('.burger');
@@ -254,7 +254,7 @@ function initLangToggle() {
 }
 
 function reinitCursorHovers() {
-  /* Ré-attache les listeners cursor après changement de langue */
+  /* R�-attache les listeners cursor apr�s changement de langue */
   initCursor();
 }
 
@@ -271,7 +271,7 @@ function startPageAnimations() {
     return;
   }
 
-  /* ── Héro : reveal séquentiel ── */
+  /* -- H�ro : reveal s�quentiel -- */
   const heroTl = gsap.timeline({ delay: 0.1 });
 
   heroTl
@@ -313,7 +313,7 @@ function initScrollAnimations() {
     return;
   }
 
-  /* Éléments .reveal génériques */
+  /* �l�ments .reveal g�n�riques */
   gsap.utils.toArray('.reveal').forEach(el => {
     gsap.to(el, {
       opacity: 1,
@@ -404,7 +404,7 @@ function initScrollAnimations() {
     });
   });
 
-  /* Piliers vision — stagger */
+  /* Piliers vision � stagger */
   gsap.utils.toArray('.pillar').forEach((pillar, i) => {
     gsap.from(pillar, {
       opacity: 0,
@@ -428,7 +428,7 @@ function initScrollAnimations() {
     });
   });
 
-  /* Cards catégorie */
+  /* Cards cat�gorie */
   gsap.utils.toArray('.category-card').forEach((card, i) => {
     gsap.from(card, {
       opacity: 0,
@@ -440,7 +440,7 @@ function initScrollAnimations() {
     });
   });
 
-  /* Products grid — entrée cinématique avec clip-path */
+  /* Products grid � entr�e cin�matique avec clip-path */
   gsap.utils.toArray('.product-card').forEach((card, i) => {
     gsap.fromTo(card,
       { opacity: 0, y: 50, clipPath: 'inset(0 0 100% 0)' },
@@ -492,7 +492,7 @@ function initScrollAnimations() {
 }
 
 /* ============================================================
-   PARALLAX — Hero image
+   PARALLAX � Hero image
    ============================================================ */
 function initParallax() {
   const heroBg = document.querySelector('.hero-bg img');
@@ -511,7 +511,7 @@ function initParallax() {
 }
 
 /* ============================================================
-   COMPTEURS ANIMÉS
+   COMPTEURS ANIM�S
    ============================================================ */
 function initCounters() {
   const counters = document.querySelectorAll('.counter-number');
@@ -552,7 +552,7 @@ function initCounters() {
 }
 
 /* ============================================================
-   SLIDER TÉMOIGNAGES
+   SLIDER T�MOIGNAGES
    ============================================================ */
 function initTestimonials() {
   const items = document.querySelectorAll('.temoignage-item');
@@ -590,7 +590,7 @@ function initTestimonials() {
 }
 
 /* ============================================================
-   WHATSAPP FLOTTANT — Tooltip
+   WHATSAPP FLOTTANT � Tooltip
    ============================================================ */
 function initFloatWhatsApp() {
   const btn = document.querySelector('.whatsapp-float');
@@ -602,10 +602,10 @@ function initFloatWhatsApp() {
 }
 
 /* ============================================================
-   CATEGORY CARDS — Split reveal sous-catégories
+   CATEGORY CARDS � Split reveal sous-cat�gories
    ============================================================ */
 function initCategoryCards() {
-  /* Le split reveal est géré par CSS hover —
+  /* Le split reveal est g�r� par CSS hover �
      on peut enrichir avec GSAP si besoin */
 }
 
@@ -633,15 +633,15 @@ function initPageTransition() {
     });
   });
 
-  /* Fade in à l'arrivée */
+  /* Fade in � l'arriv�e */
   if (typeof gsap !== 'undefined') {
     gsap.from('body', { opacity: 0, duration: 0.4, ease: 'power2.out' });
   }
 }
 
 /* ============================================================
-   SPLIT TEXT HERO — Découpe les lettres
-   (Appelé depuis HTML inline ou ici)
+   SPLIT TEXT HERO � D�coupe les lettres
+   (Appel� depuis HTML inline ou ici)
    ============================================================ */
 function splitHeroText() {
   const heroTitle = document.querySelector('.hero-title');
@@ -656,7 +656,7 @@ function splitHeroText() {
 }
 
 /* ============================================================
-   SCROLL SNAP CAROUSEL — Nouveautés
+   SCROLL SNAP CAROUSEL � Nouveaut�s
    ============================================================ */
 function initCarousel() {
   const scroll = document.querySelector('.nouveautes-scroll');
@@ -692,7 +692,7 @@ function initCarousel() {
 }
 
 /* ============================================================
-   FILTRE PRODUITS (catégorie)
+   FILTRE PRODUITS (cat�gorie)
    ============================================================ */
 function initFilters() {
   /* Sidebar subcategory filter */
@@ -761,21 +761,21 @@ function sortProducts(criterion) {
   cards.forEach(card => grid.appendChild(card));
 }
 
-/* ── Init filtres si page catégorie ── */
+/* -- Init filtres si page cat�gorie -- */
 if (document.querySelector('.category-page')) {
   document.addEventListener('DOMContentLoaded', initFilters);
 }
 
-/* ── Init carousel si section existe ── */
+/* -- Init carousel si section existe -- */
 if (document.querySelector('.nouveautes-scroll')) {
   document.addEventListener('DOMContentLoaded', initCarousel);
 }
 
-/* ── Split hero text dès que DOM prêt ── */
+/* -- Split hero text d�s que DOM pr�t -- */
 document.addEventListener('DOMContentLoaded', splitHeroText);
 
 /* ============================================================
-   THEME — Mode clair / sombre
+   THEME � Mode clair / sombre
    ============================================================ */
 function initTheme() {
   /* Anti-flash : applique le theme avant le premier paint */

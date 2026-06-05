@@ -1,9 +1,9 @@
-﻿/* ============================================================
-   NOZHA CONCEPT â€” Styles Globaux
-   Maison de couture marocaine â€” Mode traditionnelle haute couture
+/* ============================================================
+   NOZHA CONCEPT — Styles Globaux
+   Maison de couture marocaine — Mode traditionnelle haute couture
    ============================================================ */
 
-/* â”€â”€ Imports Google Fonts â”€â”€ */
+/* ── Imports Google Fonts ── */
 @import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,300;1,400;1,500&family=Jost:wght@200;300;400;500;600&display=swap');
 
 /* ============================================================
@@ -103,7 +103,7 @@ body {
   font-weight: 300;
   line-height: 1.7;
   overflow-x: hidden;
-  cursor: none; /* Curseur personnalisÃ© actif */
+  cursor: none; /* Curseur personnalisé actif */
 }
 
 body.rtl {
@@ -139,7 +139,7 @@ input, textarea, select {
 }
 
 /* ============================================================
-   CURSEUR PERSONNALISÃ‰
+   CURSEUR PERSONNALISÉ
    ============================================================ */
 .cursor {
   position: fixed;
@@ -276,10 +276,10 @@ input, textarea, select {
 }
 
 /* ============================================================
-   NAVBAR â€” Double barre
+   NAVBAR — Double barre
    ============================================================ */
 
-/* â”€â”€ Barre 1 : Marque + Navigation informative â”€â”€ */
+/* ── Barre 1 : Marque + Navigation informative ── */
 .navbar-top {
   position: fixed;
   top: 0; left: 0; right: 0;
@@ -299,7 +299,7 @@ input, textarea, select {
   box-shadow: 0 1px 0 rgba(201,169,110,0.18);
 }
 
-/* â”€â”€ Barre 2 : CatÃ©gories avec effet tubelight â”€â”€ */
+/* ── Barre 2 : Catégories avec effet tubelight ── */
 .navbar-cats {
   position: fixed;
   top: var(--nav-top-h);
@@ -376,7 +376,7 @@ input, textarea, select {
     0 0 30px 10px rgba(201,169,110,0.12);
 }
 
-/* â”€â”€ RÃ©trocompat : alias .navbar pour les pages qui l'utilisent encore â”€â”€ */
+/* ── Rétrocompat : alias .navbar pour les pages qui l'utilisent encore ── */
 .navbar { display: none !important; }
 
 .navbar-inner {
@@ -403,7 +403,7 @@ input, textarea, select {
   color: var(--or);
 }
 
-/* Nav links â€” barre 1 */
+/* Nav links — barre 1 */
 .navbar-links,
 .navbar-top-links {
   display: flex;
@@ -636,7 +636,7 @@ input, textarea, select {
 }
 
 /* ============================================================
-   HÃ‰ROS â€” PAGE ACCUEIL
+   HÉROS — PAGE ACCUEIL
    ============================================================ */
 .hero {
   position: relative;
@@ -908,7 +908,7 @@ section {
   color: var(--or);
 }
 
-/* Divider dorÃ© */
+/* Divider doré */
 .divider-or {
   width: 60px;
   height: 1px;
@@ -1125,7 +1125,7 @@ section {
 }
 
 /* ============================================================
-   SECTION CATÃ‰GORIES HUB
+   SECTION CATÉGORIES HUB
    ============================================================ */
 .categories {
   background: var(--noir);
@@ -1239,7 +1239,7 @@ section {
 }
 
 /* ============================================================
-   SECTION NOUVEAUTÃ‰S CARROUSEL
+   SECTION NOUVEAUTÉS CARROUSEL
    ============================================================ */
 .nouveautes {
   background: var(--noir);
@@ -1298,7 +1298,7 @@ section {
   scale: 1.12;
 }
 
-/* Zoom fluide sur atelier + catÃ©gories */
+/* Zoom fluide sur atelier + catégories */
 .atelier-photo { overflow: hidden; }
 .atelier-photo img {
   transition: transform 1100ms cubic-bezier(0.16, 1, 0.3, 1);
@@ -1537,7 +1537,7 @@ section {
 }
 
 /* ============================================================
-   TÃ‰MOIGNAGES
+   TÉMOIGNAGES
    ============================================================ */
 .temoignages {
   background: var(--noir-soft);
@@ -1901,7 +1901,7 @@ section {
 }
 
 /* ============================================================
-   PAGE CATÃ‰GORIE â€” SIDEBAR + GRID
+   PAGE CATÉGORIE — SIDEBAR + GRID
    ============================================================ */
 .category-page {
   padding-top: var(--nav-height);
@@ -2101,7 +2101,7 @@ section {
 }
 
 /* ============================================================
-   PAGE PRODUIT DÃ‰TAILLÃ‰E
+   PAGE PRODUIT DÉTAILLÉE
    ============================================================ */
 .product-page {
   padding-top: var(--nav-height);
@@ -2182,7 +2182,7 @@ section {
   cursor: none;
 }
 
-/* Panel dÃ©tail */
+/* Panel détail */
 .product-detail {
   padding: var(--space-12) var(--space-8);
   border-left: 1px solid rgba(201,169,110,0.08);
@@ -2223,7 +2223,7 @@ section {
   margin-left: var(--space-3);
 }
 
-/* SÃ©lecteurs couleur / taille */
+/* Sélecteurs couleur / taille */
 .selector-block {
   margin-bottom: var(--space-6);
 }
@@ -2307,7 +2307,7 @@ section {
 }
 
 .product-size.mesure::after {
-  content: ' âœ¦';
+  content: ' ✦';
   font-size: 8px;
 }
 
@@ -2563,7 +2563,7 @@ section {
   padding: var(--space-12) 0;
 }
 
-/* SVG corps fÃ©minin */
+/* SVG corps féminin */
 .body-diagram {
   position: relative;
   display: flex;
@@ -2859,7 +2859,7 @@ section {
   margin-bottom: var(--space-8);
 }
 
-/* RÃ©cap commande */
+/* Récap commande */
 .commande-recap {
   position: sticky;
   top: calc(var(--nav-height) + var(--space-8));
@@ -2911,7 +2911,7 @@ section {
 }
 
 /* ============================================================
-   PAGE NOUVEAUTÃ‰S â€” COUNTDOWN
+   PAGE NOUVEAUTÉS — COUNTDOWN
    ============================================================ */
 .countdown-section {
   background: var(--noir-soft);
@@ -2969,7 +2969,7 @@ section {
 }
 
 /* ============================================================
-   PAGE HERO INTERNE (catÃ©gories, etc.)
+   PAGE HERO INTERNE (catégories, etc.)
    ============================================================ */
 .page-hero {
   position: relative;
@@ -3081,7 +3081,7 @@ section {
 }
 
 /* ============================================================
-   RESPONSIVE â€” TABLETTE (â‰¤1200px)
+   RESPONSIVE — TABLETTE (≤1200px)
    ============================================================ */
 @media (max-width: 1200px) {
   .navbar-links {
@@ -3141,7 +3141,7 @@ section {
 }
 
 /* ============================================================
-   RESPONSIVE â€” MOBILE (â‰¤768px)
+   RESPONSIVE — MOBILE (≤768px)
    ============================================================ */
 @media (max-width: 768px) {
   :root {
@@ -3360,7 +3360,7 @@ section {
 
 
 /* ============================================================
-   ANIMATION MODEL — Mouvement realiste personne habille
+   ANIMATION MODEL � Mouvement realiste personne habille
    ============================================================ */
 @keyframes modelSway {
   0%   { translate: 0px 0px;    rotate: 0deg;     }
@@ -3381,7 +3381,7 @@ section {
 .product-card:nth-child(8) .product-card-image img { animation-delay: -3.9s; }
 
 /* ============================================================
-   THEME TOGGLE — Bouton soleil/lune
+   THEME TOGGLE � Bouton soleil/lune
    ============================================================ */
 .theme-toggle {
   width: 34px; height: 34px;
@@ -3447,7 +3447,7 @@ section {
 [data-theme="light"] .filter-label { color: var(--blanc-soft); }
 
 
-/* ── Light mode : overrides sections specifiques ── */
+/* -- Light mode : overrides sections specifiques -- */
 [data-theme="light"] body { background: var(--noir); color: var(--blanc); }
 [data-theme="light"] .hero-content h1,
 [data-theme="light"] .hero-content .hero-sub { color: #FAF6F0; }
