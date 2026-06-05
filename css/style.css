@@ -3482,3 +3482,46 @@ section {
 [data-theme="light"] .footer-copy { color: var(--gris); }
 [data-theme="light"] .page-hero-title { color: #FAF6F0; }
 [data-theme="light"] .page-hero-breadcrumb { color: rgba(250,246,240,0.7); }
+
+/* ============================================================
+   LIGHT MODE — CONTRASTE TEXTE COMPLET
+   ============================================================ */
+[data-theme="light"] .histoire-body      { color: var(--gris); }
+[data-theme="light"] .pillar-text        { color: var(--gris); }
+[data-theme="light"] .counter-label      { color: var(--gris); }
+[data-theme="light"] .fondatrice-quote   { color: var(--blanc); }
+[data-theme="light"] .footer-desc        { color: var(--gris); }
+[data-theme="light"] .footer-col ul li a { color: var(--gris); }
+[data-theme="light"] .footer-col ul li a:hover { color: var(--or); }
+[data-theme="light"] .footer-col h4      { color: var(--blanc); }
+[data-theme="light"] .newsletter-input  {
+  background: rgba(44,24,16,0.06);
+  color: var(--blanc);
+  border-color: rgba(168,106,58,0.3);
+}
+[data-theme="light"] .newsletter-input::placeholder { color: var(--gris-light); }
+[data-theme="light"] .sidebar-link       { color: var(--gris); }
+[data-theme="light"] .sidebar-link:hover,
+[data-theme="light"] .sidebar-link.active { color: var(--blanc); border-left-color: var(--or); }
+[data-theme="light"] .filter-size        { color: var(--gris); border-color: rgba(168,106,58,0.25); }
+[data-theme="light"] .sort-select        { color: var(--gris); }
+[data-theme="light"] .view-btn           { color: var(--gris); }
+[data-theme="light"] .personalisation-option { color: var(--gris); }
+[data-theme="light"] .accordion-header  { color: var(--gris); }
+[data-theme="light"] .accordion-header:hover { color: var(--blanc); }
+[data-theme="light"] .mesures-intro p    { color: var(--gris); }
+[data-theme="light"] .calc-field label   { color: var(--gris); }
+[data-theme="light"] .calc-field input  {
+  background: rgba(44,24,16,0.04);
+  color: var(--blanc);
+  border-color: rgba(168,106,58,0.3);
+}
+[data-theme="light"] .calc-result-label { color: var(--gris); }
+[data-theme="light"] .size-table td     { color: var(--gris); border-color: rgba(168,106,58,0.12); }
+[data-theme="light"] .size-table tr:hover td { color: var(--blanc); }
+[data-theme="light"] .commande-item-details { color: var(--gris); }
+[data-theme="light"] .commande-item-remove  { color: var(--gris-light); }
+[data-theme="light"] .commande-empty p  { color: var(--gris); }
+[data-theme="light"] .recap-line        { color: var(--gris); }
+[data-theme="light"] .recap-total-label { color: var(--gris); }
+[data-theme="light"] .countdown-label   { color: var(--gris); }

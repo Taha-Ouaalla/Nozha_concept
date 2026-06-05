@@ -647,12 +647,12 @@ function splitHeroText() {
   const heroTitle = document.querySelector('.hero-title');
   if (!heroTitle) return;
 
-  const text = heroTitle.textContent;
-  heroTitle.innerHTML = text.split('').map(char =>
-    char === ' '
-      ? '<span class="char" style="display:inline-block;width:0.3em">&nbsp;</span>'
-      : `<span class="char">${char}</span>`
-  ).join('');
+  const text = heroTitle.textContent.trim();
+  const space = '<span class="char" style="display:inline-block;width:0.3em"> </span>';
+  heroTitle.innerHTML = text.split(' ').map(word => {
+    const chars = word.split('').map(c => `<span class="char">${c}</span>`).join('');
+    return `<span style="display:inline-block;white-space:nowrap">${chars}</span>`;
+  }).join(space);
 }
 
 /* ============================================================
