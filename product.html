@@ -1,0 +1,389 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <script>(function(){var t=localStorage.getItem('nozha_theme')||'light';document.documentElement.setAttribute('data-theme',t);})();</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Caftan Royal BrodÃ© â€” Nozha Concept. Soie de FÃ¨s, broderie fil d'or, collection Automne 2025.">
+  <title>Caftan Royal BrodÃ© â€” Nozha Concept</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/rtl.css">
+</head>
+<body>
+
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="cursor-trail" aria-hidden="true"></div>
+  <div class="cursor-label" aria-hidden="true"></div>
+
+
+  <!-- ── NAVBAR TOP ── -->
+  <header class="navbar-top" role="banner">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-logo" aria-label="Nozha Concept">Nozha<span>.</span></a>
+      <nav class="navbar-top-links" aria-label="Navigation principale">
+        <a href="index.html" data-i18n="nav_home">Accueil</a>
+        <a href="index.html#histoire" data-i18n="nav_histoire">Notre Histoire</a>
+        <a href="index.html#fondatrice" data-i18n="nav_fondatrice">Mot de la Fondatrice</a>
+      </nav>
+      <div class="navbar-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Mode clair / sombre">
+          <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <div class="lang-toggle" aria-label="Changer de langue">
+          <button class="lang-btn active" data-lang="fr" aria-label="Français">FR</button>
+          <span class="lang-sep">|</span>
+          <button class="lang-btn" data-lang="ar" aria-label="العربية">AR</button>
+        </div>
+        <a href="ma-commande.html" class="navbar-cart" aria-label="Ma commande">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          <span data-i18n="nav_commande">Ma Commande</span>
+          <span class="cart-badge" aria-label="Nombre d'articles">0</span>
+        </a>
+        <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <!-- ── NAVBAR CATS ── -->
+  <nav class="navbar-cats" aria-label="Collections">
+    <div class="navbar-cats-inner">
+      <a href="homme.html" class="cat-link" data-cat="homme" data-i18n="nav_homme">Homme</a>
+      <a href="femme.html" class="cat-link" data-cat="femme" data-i18n="nav_femme">Femme</a>
+      <a href="enfant.html" class="cat-link" data-cat="enfant" data-i18n="nav_enfant">Enfant</a>
+      <a href="nouveautes.html" class="cat-link" data-cat="nouveautes" data-i18n="nav_nouveautes">Nouveaut&eacute;s</a>
+      <a href="lookbook.html" class="cat-link" data-cat="lookbook" data-i18n="nav_lookbook">Lookbook</a>
+      <div class="tubelight-pill" aria-hidden="true"><div class="tubelight-glow"></div></div>
+    </div>
+  </nav>
+  <!-- ── DRAWER MOBILE ── -->
+  <nav class="nav-drawer" aria-label="Menu mobile">
+    <div class="nav-drawer-links">
+      <a href="index.html" data-i18n="nav_home">Accueil</a>
+      <a href="index.html#histoire" data-i18n="nav_histoire">Notre Histoire</a>
+      <a href="homme.html" data-i18n="nav_homme">Homme</a>
+      <a href="femme.html" data-i18n="nav_femme">Femme</a>
+      <a href="enfant.html" data-i18n="nav_enfant">Enfant</a>
+      <a href="nouveautes.html" data-i18n="nav_nouveautes">Nouveautés</a>
+      <a href="mesures.html" data-i18n="nav_mesures">Mesures</a>
+      <a href="ma-commande.html" data-i18n="nav_commande">Ma Commande</a>
+    </div>
+  </nav>
+  <div class="nav-overlay" aria-hidden="true"></div></div>
+
+  <!-- BREADCRUMB -->
+  <nav aria-label="Fil d'Ariane" style="padding:calc(var(--nav-height) + var(--space-4)) var(--space-8) 0;max-width:var(--max-width);margin:0 auto">
+    <ol style="display:flex;gap:var(--space-2);align-items:center;font-size:var(--text-xs);letter-spacing:0.1em;color:rgba(250,247,242,0.35)">
+      <li><a href="index.html" style="color:inherit;transition:color 200ms" onmouseover="this.style.color='var(--or)'" onmouseout="this.style.color='inherit'">Accueil</a></li>
+      <li style="opacity:0.3">/</li>
+      <li><a href="femme.html" style="color:inherit;transition:color 200ms" onmouseover="this.style.color='var(--or)'" onmouseout="this.style.color='inherit'">Femme</a></li>
+      <li style="opacity:0.3">/</li>
+      <li style="color:var(--or)">Caftan Royal BrodÃ©</li>
+    </ol>
+  </nav>
+
+  <!-- PAGE PRODUIT -->
+  <main class="product-page">
+    <div class="product-layout">
+
+      <!-- â”€â”€ GALERIE â”€â”€ -->
+      <div class="product-gallery" aria-label="Galerie photos du produit">
+        <!-- Thumbnails verticaux -->
+        <div class="gallery-thumbs" role="list" aria-label="Photos miniatures">
+          <button class="gallery-thumb active" role="listitem" aria-label="Photo principale" aria-pressed="true">
+            <img src="Femme_Caftan/caftan_02.jpg" alt="Caftan Royal vue face" loading="lazy" width="200" height="267">
+          </button>
+          <button class="gallery-thumb" role="listitem" aria-label="Photo dos" aria-pressed="false">
+            <img src="Femme_Caftan/caftan_03.jpg" alt="Caftan Royal vue dos" loading="lazy" width="200" height="267">
+          </button>
+          <button class="gallery-thumb" role="listitem" aria-label="DÃ©tail broderie" aria-pressed="false">
+            <img src="Femme_Caftan/caftan_04.jpg" alt="DÃ©tail broderie fil d'or" loading="lazy" width="200" height="267">
+          </button>
+          <button class="gallery-thumb" role="listitem" aria-label="Photo portÃ©e" aria-pressed="false">
+            <img src="Femme_Caftan/caftan_05.jpg" alt="Caftan Royal portÃ©" loading="lazy" width="200" height="267">
+          </button>
+        </div>
+
+        <!-- Image principale -->
+        <div class="gallery-main">
+          <img src="Femme_Caftan/caftan_02.jpg"
+               alt="Caftan Royal BrodÃ© â€” Nozha Concept"
+               id="main-product-img"
+               loading="eager"
+               fetchpriority="high"
+               width="800" height="1067">
+          <div class="gallery-zoom" aria-hidden="true" title="Survolez pour zoomer"></div>
+        </div>
+      </div>
+
+      <!-- â”€â”€ PANEL DÃ‰TAIL â”€â”€ -->
+      <div class="product-detail" role="complementary" aria-label="DÃ©tails du produit">
+
+        <!-- Nom et prix -->
+        <h1 class="product-name" data-product-name data-i18n-ignore>Caftan Royal BrodÃ©</h1>
+        <p class="product-sub">Caftan brodÃ© fil d'or â€” Collection Royale 2025</p>
+        <p class="product-price" data-product-price data-price="2800" aria-label="Prix : 2 800 MAD, soit environ 255 euros">
+          2 800 MAD
+          <span class="price-eur">â‰ˆ 255 â‚¬</span>
+        </p>
+
+        <div class="divider-or" aria-hidden="true"></div>
+
+        <!-- â”€â”€ Couleur â”€â”€ -->
+        <div class="selector-block" data-type="color">
+          <p class="selector-label">
+            <span data-i18n="prod_couleur">Couleur</span>
+            <span class="selector-value" aria-live="polite">Bordeaux Royal</span>
+          </p>
+          <div class="product-colors" role="radiogroup" aria-label="Choisir la couleur">
+            <button class="product-color active"
+                    style="background:#6B1A2A"
+                    data-color="Bordeaux Royal"
+                    data-image="Femme_Caftan/caftan_02.jpg"
+                    aria-label="Bordeaux Royal" title="Bordeaux Royal" role="radio" aria-checked="true"></button>
+            <button class="product-color"
+                    style="background:#1a1a2e"
+                    data-color="Noir Nuit"
+                    data-image="Femme_Caftan/caftan_06.jpg"
+                    aria-label="Noir Nuit" title="Noir Nuit" role="radio" aria-checked="false"></button>
+            <button class="product-color"
+                    style="background:#E8E0D0;border:1px solid #ccc"
+                    data-color="Ivoire PrÃ©cieux"
+                    data-image="Femme_Caftan/caftan_07.jpg"
+                    aria-label="Ivoire PrÃ©cieux" title="Ivoire PrÃ©cieux" role="radio" aria-checked="false"></button>
+            <button class="product-color"
+                    style="background:#1B5E20"
+                    data-color="Vert Ã‰meraude"
+                    data-image="Femme_Caftan/caftan_08.jpg"
+                    aria-label="Vert Ã‰meraude" title="Vert Ã‰meraude" role="radio" aria-checked="false"></button>
+          </div>
+        </div>
+
+        <!-- â”€â”€ Taille â”€â”€ -->
+        <div class="selector-block" data-type="size" style="margin-top:var(--space-6)">
+          <p class="selector-label">
+            <span data-i18n="prod_taille">Taille</span>
+            <a href="mesures.html" style="font-size:10px;color:var(--or);letter-spacing:0.1em" aria-label="Voir le guide des tailles">Guide des tailles</a>
+          </p>
+          <div class="product-sizes" role="radiogroup" aria-label="Choisir la taille">
+            <button class="product-size" data-size="XS" role="radio" aria-checked="false">XS</button>
+            <button class="product-size" data-size="S"  role="radio" aria-checked="false">S</button>
+            <button class="product-size" data-size="M"  role="radio" aria-checked="false">M</button>
+            <button class="product-size" data-size="L"  role="radio" aria-checked="false">L</button>
+            <button class="product-size" data-size="XL" role="radio" aria-checked="false">XL</button>
+            <button class="product-size mesure" data-size="Sur mesure" role="radio" aria-checked="false" data-i18n-ignore>Sur mesure âœ¦</button>
+          </div>
+        </div>
+
+        <!-- â”€â”€ Personnalisation â”€â”€ -->
+        <div style="margin-top:var(--space-6)">
+          <button class="personalisation-toggle" aria-expanded="false" aria-controls="perso-panel">
+            <span style="font-size:var(--text-xs);letter-spacing:0.15em;text-transform:uppercase;color:rgba(250,247,242,0.6)" data-i18n="prod_perso">Je veux personnaliser cette piÃ¨ce</span>
+            <div class="toggle-switch" aria-hidden="true"></div>
+          </button>
+          <div class="personalisation-panel" id="perso-panel" aria-hidden="true">
+            <div class="personalisation-panel-inner">
+              <div class="personalisation-option">
+                <label for="broderie" style="font-size:var(--text-xs);letter-spacing:0.1em;min-width:80px" data-i18n="prod_broderie">Broderie</label>
+                <select id="broderie" aria-label="Type de broderie">
+                  <option value="">â€” Choisir â€”</option>
+                  <option value="Classique or">Classique fil d'or</option>
+                  <option value="Floral argent">Floral fil d'argent</option>
+                  <option value="GÃ©omÃ©trique">GÃ©omÃ©trique traditionnel</option>
+                  <option value="Sans broderie">Sans broderie</option>
+                </select>
+              </div>
+              <div class="personalisation-option">
+                <label for="doublure" style="font-size:var(--text-xs);letter-spacing:0.1em;min-width:80px" data-i18n="prod_doublure">Doublure</label>
+                <select id="doublure" aria-label="Couleur de doublure">
+                  <option value="">â€” Choisir â€”</option>
+                  <option value="Soie crÃ¨me">Soie crÃ¨me</option>
+                  <option value="Soie noir">Soie noire</option>
+                  <option value="Satin bordeaux">Satin bordeaux</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- â”€â”€ Boutons commande â”€â”€ -->
+        <div style="display:flex;flex-direction:column;gap:var(--space-3);margin-top:var(--space-8)">
+          <button class="btn btn-wa" data-action="wa-product" style="width:100%;justify-content:center;padding:var(--space-4)">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.088.537 4.048 1.475 5.754L0 24l6.428-1.467A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.848 0-3.575-.492-5.065-1.354l-.363-.214-3.765.859.876-3.667-.237-.378A9.946 9.946 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+            <span data-i18n="prod_wa">Commander via WhatsApp</span>
+          </button>
+          <button class="btn btn-or-outline" data-action="add-to-cart" data-product-id="caftan-royal" style="width:100%;justify-content:center;padding:var(--space-4)">
+            <span data-i18n="prod_ajouter">Ajouter Ã  ma commande</span>
+          </button>
+        </div>
+
+        <!-- â”€â”€ Description accordion â”€â”€ -->
+        <div class="accordion" style="margin-top:var(--space-8)">
+          <div class="accordion-item open">
+            <button class="accordion-header" aria-expanded="true" aria-controls="acc-details">
+              <span data-i18n="prod_details">DÃ©tails</span>
+              <div class="accordion-icon" aria-hidden="true"></div>
+            </button>
+            <div class="accordion-body" id="acc-details" role="region">
+              <div class="accordion-content">
+                Ce caftan d'exception est confectionnÃ© Ã  la main dans notre atelier de FÃ¨s. Chaque broderie est rÃ©alisÃ©e au fil d'or vÃ©ritable, selon les techniques ancestrales transmises de gÃ©nÃ©ration en gÃ©nÃ©ration. Temps de fabrication : 80 Ã  120 heures selon la complexitÃ©.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false" aria-controls="acc-matieres">
+              <span data-i18n="prod_matieres">MatiÃ¨res</span>
+              <div class="accordion-icon" aria-hidden="true"></div>
+            </button>
+            <div class="accordion-body" id="acc-matieres" role="region">
+              <div class="accordion-content">
+                ExtÃ©rieur : Soie naturelle de FÃ¨s 100% Â· Broderie : fil d'or 24 carats Â· Doublure : satin de soie Â· Fermetures : boutons nacre artisanaux
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false" aria-controls="acc-entretien">
+              <span data-i18n="prod_entretien">Entretien</span>
+              <div class="accordion-icon" aria-hidden="true"></div>
+            </button>
+            <div class="accordion-body" id="acc-entretien" role="region">
+              <div class="accordion-content">
+                Nettoyage Ã  sec uniquement. Ne pas mouiller. Conserver sur cintre rembourrÃ©, Ã  l'abri de la lumiÃ¨re. Pour les broderies, utiliser une brosse douce Ã  sec.
+              </div>
+            </div>
+          </div>
+          <div class="accordion-item">
+            <button class="accordion-header" aria-expanded="false" aria-controls="acc-livraison">
+              <span data-i18n="prod_livraison">Livraison</span>
+              <div class="accordion-icon" aria-hidden="true"></div>
+            </button>
+            <div class="accordion-body" id="acc-livraison" role="region">
+              <div class="accordion-content">
+                Livraison sous 7 Ã  14 jours (piÃ¨ce sur mesure : 21 Ã  30 jours). Livraison dans tout le Maroc et Ã  l'international. Emballage cadeau luxe inclus.
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- â”€â”€ MODAL MESURES â”€â”€ -->
+    <div class="modal-overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <div class="modal" style="position:relative">
+        <button class="modal-close" aria-label="Fermer">Ã—</button>
+        <h2 class="modal-title" id="modal-title">Prendre ses mesures</h2>
+        <p style="font-size:var(--text-sm);color:rgba(250,247,242,0.55);line-height:1.8;margin-bottom:var(--space-6)">
+          Pour une piÃ¨ce sur mesure parfaite, nous aurons besoin de vos mesures prÃ©cises. Consultez notre guide complet ou envoyez-les nous directement.
+        </p>
+        <div style="display:flex;flex-direction:column;gap:var(--space-3)">
+          <a href="mesures.html" class="btn btn-or-outline" style="width:100%;justify-content:center;padding:var(--space-4)">
+            Voir le guide des mesures complet
+          </a>
+          <a href="https://wa.me/212612653622?text=Bonjour%2C+je+souhaite+commander+sur+mesure+un+Caftan+Royal+Brod%C3%A9.+Pouvez-vous+me+guider+%3F"
+             class="btn btn-wa" target="_blank" rel="noopener" style="width:100%;justify-content:center;padding:var(--space-4)">
+            Envoyer mes mesures sur WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- â”€â”€ PRODUITS SIMILAIRES â”€â”€ -->
+    <section style="background:var(--noir-soft);padding:var(--space-20) 0" aria-labelledby="similar-title">
+      <div class="container">
+        <h2 id="similar-title" class="section-title" style="margin-bottom:var(--space-12)" data-i18n="prod_similaires">Vous <em>aimerez</em> aussi</h2>
+        <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:var(--space-4)">
+
+          <article class="product-card">
+            <div class="product-card-image">
+              <img src="Femme_Caftan/caftan_09.jpg" alt="Guendoura Festive" loading="lazy" width="400" height="533">
+              <div class="product-card-overlay" aria-hidden="true">
+                <div class="product-card-actions">
+                  <a href="product.html?id=guendoura-festive" class="btn btn-outline" style="width:100%;justify-content:center;font-size:10px;padding:10px">Voir les dÃ©tails</a>
+                </div>
+              </div>
+            </div>
+            <div class="product-card-info">
+              <div class="product-card-name">Guendoura Festive</div>
+              <div class="product-card-price">1 900 MAD</div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card-image">
+              <img src="Femme_Caftan/caftan_10.jpg" alt="Djellaba CÃ©rÃ©monie" loading="lazy" width="400" height="533">
+              <div class="product-card-overlay" aria-hidden="true">
+                <div class="product-card-actions">
+                  <a href="product.html?id=djellaba-ceremonie" class="btn btn-outline" style="width:100%;justify-content:center;font-size:10px;padding:10px">Voir les dÃ©tails</a>
+                </div>
+              </div>
+            </div>
+            <div class="product-card-info">
+              <div class="product-card-name">Djellaba de CÃ©rÃ©monie</div>
+              <div class="product-card-price">3 200 MAD</div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card-image">
+              <img src="Femme_Guendoura/guendoura_02.jpg" alt="Caftan Azur" loading="lazy" width="400" height="533">
+              <div class="product-card-overlay" aria-hidden="true">
+                <div class="product-card-actions">
+                  <a href="product.html?id=caftan-azur" class="btn btn-outline" style="width:100%;justify-content:center;font-size:10px;padding:10px">Voir les dÃ©tails</a>
+                </div>
+              </div>
+            </div>
+            <div class="product-card-info">
+              <div class="product-card-name">Caftan Azur de FÃ¨s</div>
+              <div class="product-card-price">2 200 MAD</div>
+            </div>
+          </article>
+
+          <article class="product-card">
+            <div class="product-card-image">
+              <img src="Homme_Selham/selham_03.jpg" alt="Selham de Luxe" loading="lazy" width="400" height="533">
+              <div class="product-card-overlay" aria-hidden="true">
+                <div class="product-card-actions">
+                  <a href="product.html?id=selham-luxe" class="btn btn-outline" style="width:100%;justify-content:center;font-size:10px;padding:10px">Voir les dÃ©tails</a>
+                </div>
+              </div>
+            </div>
+            <div class="product-card-info">
+              <div class="product-card-name">Selham de Luxe</div>
+              <div class="product-card-price">4 500 MAD</div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <a href="https://wa.me/212612653622" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Commander sur WhatsApp">
+    <svg viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.088.537 4.048 1.475 5.754L0 24l6.428-1.467A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.848 0-3.575-.492-5.065-1.354l-.363-.214-3.765.859.876-3.667-.237-.378A9.946 9.946 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+  </a>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="js/translations.js"></script>
+  <script src="js/panier.js"></script>
+  <script src="js/main.js"></script>
+  <script src="js/product.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,189 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <script>(function(){var t=localStorage.getItem('nozha_theme')||'light';document.documentElement.setAttribute('data-theme',t);})();</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Ma Commande Nozha Concept â€” GÃ©rez vos articles et envoyez votre commande sur WhatsApp.">
+  <title>Ma Commande â€” Nozha Concept</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/rtl.css">
+</head>
+<body>
+
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="cursor-trail" aria-hidden="true"></div>
+
+
+  <!-- ── NAVBAR TOP ── -->
+  <header class="navbar-top" role="banner">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-logo" aria-label="Nozha Concept">Nozha<span>.</span></a>
+      <nav class="navbar-top-links" aria-label="Navigation principale">
+        <a href="index.html" data-i18n="nav_home">Accueil</a>
+        <a href="index.html#histoire" data-i18n="nav_histoire">Notre Histoire</a>
+        <a href="index.html#fondatrice" data-i18n="nav_fondatrice">Mot de la Fondatrice</a>
+      </nav>
+      <div class="navbar-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Mode clair / sombre">
+          <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <div class="lang-toggle" aria-label="Changer de langue">
+          <button class="lang-btn active" data-lang="fr" aria-label="Français">FR</button>
+          <span class="lang-sep">|</span>
+          <button class="lang-btn" data-lang="ar" aria-label="العربية">AR</button>
+        </div>
+        <a href="ma-commande.html" class="navbar-cart" aria-label="Ma commande">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          <span data-i18n="nav_commande">Ma Commande</span>
+          <span class="cart-badge" aria-label="Nombre d'articles">0</span>
+        </a>
+        <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <!-- ── NAVBAR CATS ── -->
+  <nav class="navbar-cats" aria-label="Collections">
+    <div class="navbar-cats-inner">
+      <a href="homme.html" class="cat-link" data-cat="homme" data-i18n="nav_homme">Homme</a>
+      <a href="femme.html" class="cat-link" data-cat="femme" data-i18n="nav_femme">Femme</a>
+      <a href="enfant.html" class="cat-link" data-cat="enfant" data-i18n="nav_enfant">Enfant</a>
+      <a href="nouveautes.html" class="cat-link" data-cat="nouveautes" data-i18n="nav_nouveautes">Nouveaut&eacute;s</a>
+      <a href="lookbook.html" class="cat-link" data-cat="lookbook" data-i18n="nav_lookbook">Lookbook</a>
+      <div class="tubelight-pill" aria-hidden="true"><div class="tubelight-glow"></div></div>
+    </div>
+  </nav>
+  <!-- ── DRAWER MOBILE ── -->
+  <nav class="nav-drawer" aria-label="Menu mobile">
+    <div class="nav-drawer-links">
+      <a href="index.html" data-i18n="nav_home">Accueil</a>
+      <a href="index.html#histoire" data-i18n="nav_histoire">Notre Histoire</a>
+      <a href="homme.html" data-i18n="nav_homme">Homme</a>
+      <a href="femme.html" data-i18n="nav_femme">Femme</a>
+      <a href="enfant.html" data-i18n="nav_enfant">Enfant</a>
+      <a href="nouveautes.html" data-i18n="nav_nouveautes">Nouveautés</a>
+      <a href="mesures.html" data-i18n="nav_mesures">Mesures</a>
+      <a href="ma-commande.html" data-i18n="nav_commande">Ma Commande</a>
+    </div>
+  </nav>
+  <div class="nav-overlay" aria-hidden="true"></div></div>
+
+  <main class="commande-page">
+    <div class="container">
+
+      <div style="padding:calc(var(--nav-height) + var(--space-8)) 0 var(--space-8)">
+        <div class="section-label"><span data-i18n="nav_commande">Ma Commande</span></div>
+        <h1 class="section-title" data-i18n="cart_title">Ma <em>Commande</em></h1>
+        <div class="divider-or" aria-hidden="true"></div>
+      </div>
+
+      <!-- Ã‰tat vide -->
+      <div id="commande-empty" class="commande-empty" aria-live="polite">
+        <p data-i18n="cart_empty">Votre commande est vide pour l'instant.</p>
+        <a href="femme.html" class="btn btn-or-outline" data-i18n="cart_browse">Parcourir les collections</a>
+      </div>
+
+      <!-- Layout commande (cachÃ© si vide) -->
+      <div class="commande-layout" id="commande-recap" style="display:none">
+
+        <!-- Liste articles -->
+        <div>
+          <div id="commande-items" role="list" aria-label="Articles dans votre commande">
+            <!-- Rendu dynamique par panier.js -->
+          </div>
+
+          <!-- Continuer shopping -->
+          <div style="margin-top:var(--space-8);padding-top:var(--space-6);border-top:1px solid rgba(201,169,110,0.08)">
+            <a href="femme.html" style="font-size:var(--text-xs);letter-spacing:0.2em;text-transform:uppercase;color:rgba(250,247,242,0.4);display:inline-flex;align-items:center;gap:var(--space-2);transition:color 200ms ease"
+               onmouseover="this.style.color='var(--or)'" onmouseout="this.style.color='rgba(250,247,242,0.4)'">
+              â† Continuer mes achats
+            </a>
+          </div>
+        </div>
+
+        <!-- RÃ©capitulatif -->
+        <div class="commande-recap" id="commande-recap-box">
+          <h2 class="recap-title">RÃ©capitulatif</h2>
+
+          <div id="recap-lines">
+            <!-- Rendu dynamique par panier.js -->
+          </div>
+
+          <div class="recap-total" aria-label="Total de la commande">
+            <span class="recap-total-label" data-i18n="cart_total">Total estimÃ©</span>
+            <span class="recap-total-amount" id="recap-total-amount" aria-live="polite">0 MAD</span>
+          </div>
+
+          <!-- Note livraison -->
+          <p style="font-size:var(--text-xs);color:rgba(250,247,242,0.3);letter-spacing:0.08em;line-height:1.7;margin-bottom:var(--space-6)">
+            Les frais de livraison et les dÃ©lais seront confirmÃ©s par WhatsApp. Toutes les commandes sont fabriquÃ©es Ã  la main sur mesure.
+          </p>
+
+          <!-- Bouton WhatsApp principal -->
+          <button class="btn btn-wa" onclick="envoyerCommandeWA()" style="width:100%;justify-content:center;padding:var(--space-4)">
+            <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.088.537 4.048 1.475 5.754L0 24l6.428-1.467A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.848 0-3.575-.492-5.065-1.354l-.363-.214-3.765.859.876-3.667-.237-.378A9.946 9.946 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+            <span data-i18n="cart_wa">Envoyer ma commande sur WhatsApp</span>
+          </button>
+
+          <!-- Vider le panier -->
+          <button onclick="viderPanier()" style="width:100%;padding:var(--space-3);margin-top:var(--space-3);font-size:var(--text-xs);letter-spacing:0.2em;text-transform:uppercase;color:rgba(250,247,242,0.25);border:1px solid rgba(250,247,242,0.05);transition:all 200ms ease;cursor:pointer;background:none"
+                  onmouseover="this.style.color='var(--bordeaux-light)';this.style.borderColor='rgba(107,26,42,0.3)'"
+                  onmouseout="this.style.color='rgba(250,247,242,0.25)';this.style.borderColor='rgba(250,247,242,0.05)'">
+            Vider la commande
+          </button>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+  <a href="https://wa.me/212612653622" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Contacter sur WhatsApp">
+    <svg viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.088.537 4.048 1.475 5.754L0 24l6.428-1.467A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.848 0-3.575-.492-5.065-1.354l-.363-.214-3.765.859.876-3.667-.237-.378A9.946 9.946 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+  </a>
+
+  <script src="js/translations.js"></script>
+  <script src="js/panier.js"></script>
+  <script src="js/main.js"></script>
+  <script>
+    function viderPanier() {
+      if (confirm('Vider toute la commande ?')) {
+        if (window.NozhaCart) window.NozhaCart.clearPanier();
+        renderCommande();
+        updateBadge();
+      }
+    }
+
+    /* Adapte l'affichage du layout quand le panier change */
+    window.addEventListener('panierUpdated', () => {
+      const count  = window.NozhaCart?.getCount() || 0;
+      const emptyEl = document.getElementById('commande-empty');
+      const recapEl = document.getElementById('commande-recap');
+      if (emptyEl) emptyEl.style.display = count === 0 ? 'block' : 'none';
+      if (recapEl) recapEl.style.display = count > 0 ? 'grid' : 'none';
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+      const count  = window.NozhaCart?.getCount() || 0;
+      const emptyEl = document.getElementById('commande-empty');
+      const recapEl = document.getElementById('commande-recap');
+      if (emptyEl) emptyEl.style.display = count === 0 ? 'block' : 'none';
+      if (recapEl) recapEl.style.display = count > 0 ? 'grid' : 'none';
+    });
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+

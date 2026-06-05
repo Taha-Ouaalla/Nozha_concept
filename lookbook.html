@@ -1,0 +1,817 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <script>(function(){var t=localStorage.getItem('nozha_theme')||'light';document.documentElement.setAttribute('data-theme',t);})();</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Lookbook Nozha Concept — Découvrez nos inspirations de style, des tenues cérémoniales aux looks casual modestes.">
+  <title>Lookbook — Nozha Concept</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/rtl.css">
+  <style>
+    /* ── LOOKBOOK PAGE STYLES ── */
+    .lb-hero {
+      position: relative;
+      height: 100svh;
+      min-height: 600px;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+    }
+    .lb-hero-bg {
+      position: absolute;
+      inset: 0;
+    }
+    .lb-hero-bg img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      animation: kenBurns 20s ease-in-out infinite alternate;
+    }
+    .lb-hero-bg::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(44,24,16,0.85) 0%, rgba(44,24,16,0.3) 50%, transparent 100%);
+    }
+    .lb-hero-content {
+      position: relative;
+      z-index: 2;
+      padding: var(--space-12) var(--space-8);
+      max-width: 700px;
+    }
+    .lb-hero-label {
+      font-family: var(--font-body);
+      font-size: var(--text-xs);
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: var(--or);
+      margin-bottom: var(--space-4);
+      display: block;
+    }
+    .lb-hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.8rem, 7vw, 5.5rem);
+      font-weight: 300;
+      color: #FAF6F0;
+      line-height: 1.05;
+      margin-bottom: var(--space-6);
+    }
+    .lb-hero-title em {
+      font-style: italic;
+      color: var(--or);
+    }
+    .lb-hero-sub {
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      font-weight: 300;
+      color: rgba(250,246,240,0.75);
+      letter-spacing: 0.05em;
+      max-width: 480px;
+      line-height: 1.7;
+    }
+    .lb-season {
+      position: absolute;
+      top: 50%;
+      right: var(--space-8);
+      transform: translateY(-50%) rotate(90deg);
+      transform-origin: center;
+      font-family: var(--font-body);
+      font-size: 10px;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: rgba(250,246,240,0.5);
+      z-index: 2;
+    }
+
+    /* ── EDITORIAL INTRO ── */
+    .lb-intro {
+      padding: 6rem var(--space-8) 4rem;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .lb-intro-number {
+      font-family: var(--font-display);
+      font-size: 5rem;
+      color: var(--terracotta);
+      opacity: 0.15;
+      line-height: 1;
+      margin-bottom: -1.5rem;
+    }
+    .lb-intro-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 4vw, 3rem);
+      font-weight: 300;
+      color: var(--blanc);
+      margin-bottom: var(--space-6);
+    }
+    .lb-intro-text {
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      font-weight: 300;
+      color: var(--gris);
+      line-height: 1.85;
+      letter-spacing: 0.03em;
+    }
+    .lb-divider {
+      width: 60px;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, var(--or), transparent);
+      margin: 3rem auto;
+    }
+
+    /* ── LOOK SECTIONS ── */
+    .lb-look {
+      display: grid;
+      min-height: 90vh;
+      position: relative;
+    }
+    .lb-look-split {
+      grid-template-columns: 1fr 1fr;
+    }
+    .lb-look-full {
+      grid-template-columns: 1fr;
+    }
+    .lb-look-reverse {
+      direction: rtl;
+    }
+    .lb-look-reverse > * {
+      direction: ltr;
+    }
+    .lb-look-img {
+      position: relative;
+      overflow: hidden;
+      min-height: 70vh;
+    }
+    .lb-look-img img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      transition: scale 1400ms cubic-bezier(0.16,1,0.3,1);
+      animation: modelSway 9s ease-in-out infinite;
+    }
+    .lb-look:hover .lb-look-img img { scale: 1.07; animation-play-state: paused; }
+    .lb-look-img-overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(135deg, rgba(44,24,16,0.1) 0%, transparent 60%);
+    }
+    .lb-look-tag {
+      position: absolute;
+      top: var(--space-8);
+      left: var(--space-8);
+      background: var(--terracotta);
+      color: #FAF6F0;
+      font-family: var(--font-body);
+      font-size: 10px;
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      padding: 6px 14px;
+    }
+
+    .lb-look-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 5rem 4rem;
+      background: var(--noir-soft);
+    }
+    .lb-look-num {
+      font-family: var(--font-display);
+      font-size: 5rem;
+      font-weight: 300;
+      color: var(--terracotta);
+      opacity: 0.2;
+      line-height: 1;
+      margin-bottom: var(--space-2);
+    }
+    .lb-look-category {
+      font-family: var(--font-body);
+      font-size: 10px;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: var(--or);
+      margin-bottom: var(--space-4);
+    }
+    .lb-look-name {
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 3vw, 2.5rem);
+      font-weight: 400;
+      color: var(--blanc);
+      line-height: 1.2;
+      margin-bottom: var(--space-6);
+    }
+    .lb-look-name em { font-style: italic; color: var(--or); }
+    .lb-look-desc {
+      font-family: var(--font-body);
+      font-size: var(--text-sm);
+      font-weight: 300;
+      color: var(--gris);
+      line-height: 1.9;
+      letter-spacing: 0.03em;
+      margin-bottom: var(--space-8);
+      max-width: 360px;
+    }
+    .lb-look-details {
+      display: flex;
+      flex-wrap: wrap;
+      gap: var(--space-2);
+      margin-bottom: var(--space-8);
+    }
+    .lb-look-detail-tag {
+      font-family: var(--font-body);
+      font-size: 10px;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      padding: 5px 12px;
+      border: 1px solid rgba(201,169,110,0.25);
+      color: var(--gris);
+    }
+    .lb-look-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: var(--space-3);
+      font-family: var(--font-body);
+      font-size: var(--text-sm);
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--or);
+      text-decoration: none;
+      transition: gap 250ms ease, color 200ms ease;
+    }
+    .lb-look-cta svg { transition: transform 250ms ease; }
+    .lb-look-cta:hover { gap: var(--space-4); color: var(--or-light); }
+    .lb-look-cta:hover svg { transform: translateX(4px); }
+
+    /* ── FULL BLEED STORY ── */
+    .lb-story {
+      position: relative;
+      height: 70vh;
+      min-height: 500px;
+      overflow: hidden;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .lb-story-bg img {
+      position: absolute;
+      inset: 0;
+      width: 100%; height: 100%;
+      object-fit: cover;
+    }
+    .lb-story-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(44,24,16,0.6);
+    }
+    .lb-story-content {
+      position: relative;
+      z-index: 2;
+      text-align: center;
+      padding: var(--space-8);
+    }
+    .lb-story-quote {
+      font-family: var(--font-display);
+      font-size: clamp(1.5rem, 4vw, 3rem);
+      font-weight: 300;
+      font-style: italic;
+      color: #FAF6F0;
+      max-width: 700px;
+      line-height: 1.4;
+      margin-bottom: var(--space-4);
+    }
+    .lb-story-quote span { color: var(--or); }
+    .lb-story-author {
+      font-family: var(--font-body);
+      font-size: var(--text-xs);
+      letter-spacing: 0.3em;
+      text-transform: uppercase;
+      color: rgba(250,246,240,0.6);
+    }
+
+    /* ── MOSAIC GRID ── */
+    .lb-mosaic {
+      padding: 6rem var(--space-8);
+    }
+    .lb-mosaic-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+    .lb-mosaic-label {
+      font-family: var(--font-body);
+      font-size: 10px;
+      letter-spacing: 0.4em;
+      text-transform: uppercase;
+      color: var(--or);
+      display: block;
+      margin-bottom: var(--space-4);
+    }
+    .lb-mosaic-title {
+      font-family: var(--font-display);
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: 300;
+      color: var(--blanc);
+    }
+    .lb-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr 1fr;
+      grid-template-rows: auto auto;
+      gap: 16px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .lb-grid-item {
+      position: relative;
+      overflow: hidden;
+    }
+    .lb-grid-item:nth-child(1) { grid-row: span 2; }
+    .lb-grid-item img {
+      width: 100%; height: 100%;
+      object-fit: cover;
+      min-height: 300px;
+      transition: scale 1200ms cubic-bezier(0.16,1,0.3,1);
+      animation: modelSway 8.5s ease-in-out infinite;
+    }
+    .lb-grid-item:nth-child(2) img { animation-delay: -2s; }
+    .lb-grid-item:nth-child(3) img { animation-delay: -4s; }
+    .lb-grid-item:nth-child(4) img { animation-delay: -6s; }
+    .lb-grid-item:nth-child(5) img { animation-delay: -1.5s; }
+    .lb-grid-item:hover img { scale: 1.08; animation-play-state: paused; }
+    .lb-grid-caption {
+      position: absolute;
+      bottom: 0; left: 0; right: 0;
+      padding: var(--space-6) var(--space-4) var(--space-4);
+      background: linear-gradient(to top, rgba(44,24,16,0.75), transparent);
+      transform: translateY(100%);
+      transition: transform 400ms cubic-bezier(0.16,1,0.3,1);
+    }
+    .lb-grid-item:hover .lb-grid-caption { transform: translateY(0); }
+    .lb-grid-caption-name {
+      font-family: var(--font-display);
+      font-size: var(--text-lg);
+      color: #FAF6F0;
+    }
+    .lb-grid-caption-cat {
+      font-family: var(--font-body);
+      font-size: 10px;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--or);
+    }
+
+    /* ── STYLE TIP BAR ── */
+    .lb-tip-bar {
+      background: var(--terracotta);
+      padding: var(--space-8) var(--space-8);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: var(--space-8);
+      flex-wrap: wrap;
+    }
+    .lb-tip-item {
+      display: flex;
+      align-items: center;
+      gap: var(--space-3);
+      color: #FAF6F0;
+    }
+    .lb-tip-icon {
+      width: 32px; height: 32px;
+      border: 1px solid rgba(250,246,240,0.4);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0;
+    }
+    .lb-tip-text {
+      font-family: var(--font-body);
+      font-size: var(--text-sm);
+      font-weight: 300;
+      letter-spacing: 0.05em;
+    }
+    .lb-tip-sep {
+      width: 1px;
+      height: 24px;
+      background: rgba(250,246,240,0.25);
+    }
+
+    /* ── CTA FINAL ── */
+    .lb-cta-section {
+      padding: 7rem var(--space-8);
+      text-align: center;
+      background: var(--noir-soft);
+    }
+    .lb-cta-arabesque {
+      font-family: var(--font-display);
+      font-size: 3rem;
+      color: var(--or);
+      opacity: 0.3;
+      margin-bottom: var(--space-4);
+      line-height: 1;
+    }
+    .lb-cta-title {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 300;
+      color: var(--blanc);
+      margin-bottom: var(--space-6);
+      line-height: 1.2;
+    }
+    .lb-cta-title em { font-style: italic; color: var(--or); }
+    .lb-cta-sub {
+      font-family: var(--font-body);
+      font-size: var(--text-base);
+      font-weight: 300;
+      color: var(--gris);
+      letter-spacing: 0.05em;
+      margin-bottom: var(--space-8);
+    }
+    .lb-cta-btns {
+      display: flex;
+      gap: var(--space-4);
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      .lb-look-split { grid-template-columns: 1fr; }
+      .lb-look-reverse { direction: ltr; }
+      .lb-look-info { padding: 3rem 2rem; }
+      .lb-grid { grid-template-columns: 1fr 1fr; }
+      .lb-grid-item:nth-child(1) { grid-row: span 1; }
+      .lb-tip-sep { display: none; }
+    }
+    @media (max-width: 600px) {
+      .lb-grid { grid-template-columns: 1fr; }
+      .lb-hero-content { padding: 2rem var(--space-4); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="cursor-trail" aria-hidden="true"></div>
+  <div class="cursor-label" aria-hidden="true"></div>
+
+  <!-- ── NAVBAR TOP ── -->
+  <header class="navbar-top" role="banner">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-logo" aria-label="Nozha Concept">Nozha<span>.</span></a>
+      <nav class="navbar-top-links" aria-label="Navigation principale">
+        <a href="index.html" data-i18n="nav_home">Accueil</a>
+        <a href="index.html#histoire" data-i18n="nav_histoire">Notre Histoire</a>
+        <a href="index.html#fondatrice" data-i18n="nav_fondatrice">Mot de la Fondatrice</a>
+      </nav>
+      <div class="navbar-actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Mode clair / sombre">
+          <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <div class="lang-toggle" aria-label="Changer de langue">
+          <button class="lang-btn active" data-lang="fr" aria-label="Français">FR</button>
+          <span class="lang-sep">|</span>
+          <button class="lang-btn" data-lang="ar" aria-label="العربية">AR</button>
+        </div>
+        <a href="ma-commande.html" class="navbar-cart" aria-label="Ma commande">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          <span data-i18n="nav_commande">Ma Commande</span>
+          <span class="cart-badge" aria-label="Nombre d'articles">0</span>
+        </a>
+        <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- ── NAVBAR CATS ── -->
+  <nav class="navbar-cats" aria-label="Collections">
+    <div class="navbar-cats-inner">
+      <a href="homme.html"     class="cat-link" data-cat="homme"     data-i18n="nav_homme">Homme</a>
+      <a href="femme.html"     class="cat-link" data-cat="femme"     data-i18n="nav_femme">Femme</a>
+      <a href="enfant.html"    class="cat-link" data-cat="enfant"    data-i18n="nav_enfant">Enfant</a>
+      <a href="nouveautes.html" class="cat-link" data-cat="nouveautes" data-i18n="nav_nouveautes">Nouveaut&eacute;s</a>
+      <a href="lookbook.html"  class="cat-link active" data-cat="lookbook" data-i18n="nav_lookbook">Lookbook</a>
+      <div class="tubelight-pill" aria-hidden="true"><div class="tubelight-glow"></div></div>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════════════════
+       HERO
+  ═══════════════════════════════════════════════════ -->
+  <section class="lb-hero">
+    <div class="lb-hero-bg">
+      <img src="Femme_Caftan/caftan_01.jpg" alt="Lookbook Nozha Concept" loading="eager">
+    </div>
+    <div class="lb-hero-content reveal">
+      <span class="lb-hero-label">Lookbook · Printemps 2025</span>
+      <h1 class="lb-hero-title">
+        L'art de se vêtir<br>
+        avec <em>âme</em>
+      </h1>
+      <p class="lb-hero-sub">
+        Chaque pièce Nozha Concept est conçue pour la femme qui honore ses racines sans renoncer à son présent. Tradition vivante, style personnel.
+      </p>
+    </div>
+    <span class="lb-season">Saison 2025 — Maroc</span>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       INTRO ÉDITORIALE
+  ═══════════════════════════════════════════════════ -->
+  <section class="lb-intro reveal">
+    <div class="lb-intro-number">01</div>
+    <h2 class="lb-intro-title">Trois femmes. Une identité.</h2>
+    <div class="lb-divider"></div>
+    <p class="lb-intro-text">
+      Ce lookbook explore trois silhouettes de la femme Nozha Concept —
+      la mariée qui rayonne, la citadine élégante, la femme active au style discret et puissant.
+      Des pièces pensées pour être portées, pas simplement admirées.
+    </p>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       LOOK 01 — LA CÉRÉMONIE
+  ═══════════════════════════════════════════════════ -->
+  <article class="lb-look lb-look-split reveal-left">
+    <div class="lb-look-img">
+      <img src="Femme_Caftan/caftan_03.jpg" alt="Caftan de cérémonie Nozha Concept">
+      <div class="lb-look-img-overlay"></div>
+      <span class="lb-look-tag">Cérémonie</span>
+    </div>
+    <div class="lb-look-info">
+      <div class="lb-look-num">01</div>
+      <span class="lb-look-category">La Mariée · La Cérémonie</span>
+      <h2 class="lb-look-name">
+        Caftan Royal<br>
+        <em>Brodé à la main</em>
+      </h2>
+      <p class="lb-look-desc">
+        Pour les moments qui méritent l'exception. Ce caftan en soie de Fès à broderies artisanales est une déclaration silencieuse de prestige et d'identité. Chaque fil raconte une histoire.
+      </p>
+      <div class="lb-look-details">
+        <span class="lb-look-detail-tag">Soie de Fès</span>
+        <span class="lb-look-detail-tag">Broderie main</span>
+        <span class="lb-look-detail-tag">Sur-mesure</span>
+        <span class="lb-look-detail-tag">Ceinture assortie</span>
+      </div>
+      <a href="https://wa.me/212612653622?text=Bonjour%20%F0%9F%8C%B9%20Je%20souhaite%20me%20renseigner%20sur%20le%20Caftan%20Royal%20brod%C3%A9%20du%20Lookbook%20svp" class="lb-look-cta" target="_blank" rel="noopener">
+        Demander ce look
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </article>
+
+  <!-- ═══════════════════════════════════════════════════
+       LOOK 02 — LA MODERNE
+  ═══════════════════════════════════════════════════ -->
+  <article class="lb-look lb-look-split lb-look-reverse reveal-right">
+    <div class="lb-look-img">
+      <img src="Femme_PretAPorter/pret_02.jpg" alt="Style moderne Nozha Concept">
+      <div class="lb-look-img-overlay"></div>
+      <span class="lb-look-tag">Casual Chic</span>
+    </div>
+    <div class="lb-look-info">
+      <div class="lb-look-num">02</div>
+      <span class="lb-look-category">La Citadine · Le Quotidien Élégant</span>
+      <h2 class="lb-look-name">
+        Prêt-à-Porter<br>
+        <em>Modeste & Contemporain</em>
+      </h2>
+      <p class="lb-look-desc">
+        Pour la femme active qui veut allier confort, élégance et pudeur. Des coupes fluides, des matières respirantes et des silhouettes qui voyagent avec elle — du bureau à la terrasse.
+      </p>
+      <div class="lb-look-details">
+        <span class="lb-look-detail-tag">Coton premium</span>
+        <span class="lb-look-detail-tag">Coupe ample</span>
+        <span class="lb-look-detail-tag">Tailles S → XL</span>
+        <span class="lb-look-detail-tag">Disponible</span>
+      </div>
+      <a href="https://wa.me/212612653622?text=Bonjour%20%F0%9F%8C%B9%20Je%20suis%20int%C3%A9ress%C3%A9e%20par%20la%20ligne%20Pr%C3%AAt-%C3%A0-Porter%20du%20Lookbook%20svp" class="lb-look-cta" target="_blank" rel="noopener">
+        Demander ce look
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </article>
+
+  <!-- ═══════════════════════════════════════════════════
+       CITATION PLEIN ÉCRAN
+  ═══════════════════════════════════════════════════ -->
+  <section class="lb-story reveal">
+    <div class="lb-story-bg">
+      <img src="Femme_Guendoura/guendoura_03.jpg" alt="Nozha Concept — Guendoura">
+    </div>
+    <div class="lb-story-overlay"></div>
+    <div class="lb-story-content">
+      <blockquote class="lb-story-quote">
+        "La mode passe, <span>le style reste</span> — surtout quand il porte en lui l'histoire d'un peuple."
+      </blockquote>
+      <cite class="lb-story-author">Nozha · Fondatrice de Nozha Concept</cite>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       LOOK 03 — L'ÉLÉGANCE DOUCE
+  ═══════════════════════════════════════════════════ -->
+  <article class="lb-look lb-look-split reveal-left">
+    <div class="lb-look-img">
+      <img src="Femme_Guendoura/guendoura_01.jpg" alt="Guendoura élégante Nozha Concept">
+      <div class="lb-look-img-overlay"></div>
+      <span class="lb-look-tag">Tradition Vivante</span>
+    </div>
+    <div class="lb-look-info">
+      <div class="lb-look-num">03</div>
+      <span class="lb-look-category">La Guendoura · Tradition Réinventée</span>
+      <h2 class="lb-look-name">
+        Guendoura Brodée<br>
+        <em>Âme berbère</em>
+      </h2>
+      <p class="lb-look-desc">
+        La guendoura Nozha Concept réconcilie l'héritage berbère avec les goûts contemporains. Légère, aérienne, brodée à la main — elle se porte à la maison comme en visite, avec la même fierté.
+      </p>
+      <div class="lb-look-details">
+        <span class="lb-look-detail-tag">Laine douce</span>
+        <span class="lb-look-detail-tag">Motifs berbères</span>
+        <span class="lb-look-detail-tag">Artisan local</span>
+        <span class="lb-look-detail-tag">Livraison Maroc</span>
+      </div>
+      <a href="https://wa.me/212612653622?text=Bonjour%20%F0%9F%8C%B9%20Je%20souhaite%20me%20renseigner%20sur%20la%20Guendoura%20brod%C3%A9e%20du%20Lookbook%20svp" class="lb-look-cta" target="_blank" rel="noopener">
+        Demander ce look
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </article>
+
+  <!-- ═══════════════════════════════════════════════════
+       MOSAÏQUE STYLES
+  ═══════════════════════════════════════════════════ -->
+  <section class="lb-mosaic reveal">
+    <div class="lb-mosaic-header">
+      <span class="lb-mosaic-label">Galerie · Toutes les ambiances</span>
+      <h2 class="lb-mosaic-title">D'une occasion à l'autre</h2>
+    </div>
+    <div class="lb-grid">
+      <div class="lb-grid-item">
+        <img src="Femme_Caftan/caftan_05.jpg" alt="Caftan cérémonie" loading="lazy">
+        <div class="lb-grid-caption">
+          <div class="lb-grid-caption-cat">Caftan</div>
+          <div class="lb-grid-caption-name">Cérémonie Royale</div>
+        </div>
+      </div>
+      <div class="lb-grid-item">
+        <img src="Femme_RobeCaftan/robe_01.jpg" alt="Robe caftan" loading="lazy">
+        <div class="lb-grid-caption">
+          <div class="lb-grid-caption-cat">Robe Caftan</div>
+          <div class="lb-grid-caption-name">Élégance Moderne</div>
+        </div>
+      </div>
+      <div class="lb-grid-item">
+        <img src="Homme_Selham/selham_02.jpg" alt="Selham homme" loading="lazy">
+        <div class="lb-grid-caption">
+          <div class="lb-grid-caption-cat">Homme · Selham</div>
+          <div class="lb-grid-caption-name">Noblesse Marocaine</div>
+        </div>
+      </div>
+      <div class="lb-grid-item">
+        <img src="Femme_PretAPorter/pret_03.jpg" alt="Prêt-à-porter" loading="lazy">
+        <div class="lb-grid-caption">
+          <div class="lb-grid-caption-cat">Prêt-à-Porter</div>
+          <div class="lb-grid-caption-name">Casual Modeste</div>
+        </div>
+      </div>
+      <div class="lb-grid-item">
+        <img src="Femme_Guendoura/guendoura_02.jpg" alt="Guendoura" loading="lazy">
+        <div class="lb-grid-caption">
+          <div class="lb-grid-caption-cat">Guendoura</div>
+          <div class="lb-grid-caption-name">Âme Berbère</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════════════════
+       TIPS DE STYLE
+  ═══════════════════════════════════════════════════ -->
+  <div class="lb-tip-bar">
+    <div class="lb-tip-item">
+      <div class="lb-tip-icon">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+      </div>
+      <span class="lb-tip-text">Chaque pièce est faite à la main par des artisans marocains</span>
+    </div>
+    <div class="lb-tip-sep"></div>
+    <div class="lb-tip-item">
+      <div class="lb-tip-icon">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+      </div>
+      <span class="lb-tip-text">Personnalisation couleur, broderie et mesures disponible</span>
+    </div>
+    <div class="lb-tip-sep"></div>
+    <div class="lb-tip-item">
+      <div class="lb-tip-icon">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="1" y="3" width="15" height="13"/><polygon points="16 8 20 8 23 11 23 16 16 16 16 8"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>
+      </div>
+      <span class="lb-tip-text">Livraison partout au Maroc et à l'international</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════════════════
+       CTA FINAL
+  ═══════════════════════════════════════════════════ -->
+  <section class="lb-cta-section reveal">
+    <div class="lb-cta-arabesque">✦</div>
+    <h2 class="lb-cta-title">
+      Votre look,<br>
+      <em>fait pour vous</em>
+    </h2>
+    <p class="lb-cta-sub">Partagez-nous vos préférences sur WhatsApp — nous vous guidons vers la pièce idéale.</p>
+    <div class="lb-cta-btns">
+      <a href="https://wa.me/212612653622?text=Bonjour%20%F0%9F%8C%B9%20J'ai%20vu%20votre%20lookbook%20et%20j'aimerais%20me%20renseigner%20sur%20une%20pi%C3%A8ce%20svp"
+         class="btn btn-wa" target="_blank" rel="noopener"
+         style="display:inline-flex;align-items:center;gap:10px;padding:14px 32px;background:var(--terracotta);color:#FAF6F0;font-family:var(--font-body);font-size:var(--text-sm);letter-spacing:0.15em;text-transform:uppercase;text-decoration:none;border:none;">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Consulter sur WhatsApp
+      </a>
+      <a href="femme.html"
+         style="display:inline-flex;align-items:center;gap:10px;padding:14px 32px;border:1px solid rgba(196,113,74,0.4);color:var(--terracotta);font-family:var(--font-body);font-size:var(--text-sm);letter-spacing:0.15em;text-transform:uppercase;text-decoration:none;background:none;transition:all 250ms ease;">
+        Voir la collection Femme
+      </a>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-brand">
+        <div class="footer-logo">Nozha<span>.</span></div>
+        <p class="footer-tagline" data-i18n="footer_tagline">L'Art du Vêtement Marocain</p>
+        <div class="footer-social">
+          <a href="https://instagram.com/nozha.concept" target="_blank" rel="noopener" aria-label="Instagram Nozha Concept">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+          </a>
+          <a href="https://wa.me/212612653622" target="_blank" rel="noopener" aria-label="WhatsApp Nozha Concept">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          </a>
+        </div>
+      </div>
+      <nav class="footer-links" aria-label="Liens utiles">
+        <h3 class="footer-links-title" data-i18n="footer_collections">Collections</h3>
+        <a href="femme.html">Femme</a>
+        <a href="homme.html">Homme</a>
+        <a href="enfant.html">Enfant</a>
+        <a href="nouveautes.html">Nouveautés</a>
+        <a href="lookbook.html">Lookbook</a>
+      </nav>
+      <nav class="footer-links" aria-label="Informations">
+        <h3 class="footer-links-title" data-i18n="footer_info">Informations</h3>
+        <a href="index.html#histoire" data-i18n="footer_histoire">Notre Histoire</a>
+        <a href="mesures.html" data-i18n="footer_mesures">Guide des Mesures</a>
+        <a href="ma-commande.html" data-i18n="footer_commande">Ma Commande</a>
+      </nav>
+      <div class="footer-contact">
+        <h3 class="footer-links-title" data-i18n="footer_contact">Contact</h3>
+        <a href="https://wa.me/212612653622" class="footer-wa">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          +212 612 653 622
+        </a>
+        <p class="footer-copy" data-i18n="footer_copy">© 2025 Nozha Concept. Tous droits réservés.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ── NAV DRAWER MOBILE ── -->
+  <div class="nav-overlay" aria-hidden="true"></div>
+  <aside class="nav-drawer" aria-label="Menu mobile" aria-hidden="true">
+    <div class="nav-drawer-header">
+      <span class="nav-drawer-logo">Nozha<span>.</span></span>
+      <button class="nav-drawer-close" aria-label="Fermer le menu">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M18 6L6 18M6 6l12 12"/></svg>
+      </button>
+    </div>
+    <nav class="nav-drawer-links">
+      <a href="index.html" data-i18n="nav_home">Accueil</a>
+      <a href="femme.html" data-i18n="nav_femme">Femme</a>
+      <a href="homme.html" data-i18n="nav_homme">Homme</a>
+      <a href="enfant.html" data-i18n="nav_enfant">Enfant</a>
+      <a href="nouveautes.html" data-i18n="nav_nouveautes">Nouveautés</a>
+      <a href="lookbook.html" data-i18n="nav_lookbook">Lookbook</a>
+      <a href="index.html#histoire" data-i18n="nav_histoire">Notre Histoire</a>
+      <a href="mesures.html" data-i18n="footer_mesures">Guide des Mesures</a>
+    </nav>
+  </aside>
+
+  <!-- WhatsApp flottant -->
+  <a href="https://wa.me/212612653622" class="float-wa" target="_blank" rel="noopener" aria-label="WhatsApp">
+    <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </a>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="js/translations.js" defer></script>
+  <script src="js/panier.js" defer></script>
+  <script src="js/main.js" defer></script>
+</body>
+</html>

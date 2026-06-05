@@ -1,0 +1,347 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <script>(function(){var t=localStorage.getItem('nozha_theme')||'light';document.documentElement.setAttribute('data-theme',t);})();</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="NouveautÃ©s Nozha Concept â€” DÃ©couvrez les derniÃ¨res crÃ©ations de notre maison de couture marocaine.">
+  <title>NouveautÃ©s â€” Nozha Concept</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/rtl.css">
+</head>
+<body>
+
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="cursor-trail" aria-hidden="true"></div>
+  <div class="cursor-label" aria-hidden="true"></div>
+
+
+  <!-- ── NAVBAR TOP ── -->
+  <header class="navbar-top" role="banner">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-logo" aria-label="Nozha Concept">Nozha<span>.</span></a>
+      <nav class="navbar-top-links" aria-label="Navigation principale">
+        <a href="index.html" data-i18n="nav_home">Accueil</a>
+        <a href="index.html#histoire" data-i18n="nav_histoire">Notre Histoire</a>
+        <a href="index.html#fondatrice" data-i18n="nav_fondatrice">Mot de la Fondatrice</a>
+      </nav>
+      <div class="navbar-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Mode clair / sombre">
+          <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <div class="lang-toggle" aria-label="Changer de langue">
+          <button class="lang-btn active" data-lang="fr" aria-label="Français">FR</button>
+          <span class="lang-sep">|</span>
+          <button class="lang-btn" data-lang="ar" aria-label="العربية">AR</button>
+        </div>
+        <a href="ma-commande.html" class="navbar-cart" aria-label="Ma commande">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          <span data-i18n="nav_commande">Ma Commande</span>
+          <span class="cart-badge" aria-label="Nombre d'articles">0</span>
+        </a>
+        <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <!-- ── NAVBAR CATS ── -->
+  <nav class="navbar-cats" aria-label="Collections">
+    <div class="navbar-cats-inner">
+      <a href="homme.html" class="cat-link" data-cat="homme" data-i18n="nav_homme">Homme</a>
+      <a href="femme.html" class="cat-link" data-cat="femme" data-i18n="nav_femme">Femme</a>
+      <a href="enfant.html" class="cat-link" data-cat="enfant" data-i18n="nav_enfant">Enfant</a>
+      <a href="nouveautes.html" class="cat-link" data-cat="nouveautes" data-i18n="nav_nouveautes">Nouveaut&eacute;s</a>
+      <a href="lookbook.html" class="cat-link" data-cat="lookbook" data-i18n="nav_lookbook">Lookbook</a>
+      <div class="tubelight-pill" aria-hidden="true"><div class="tubelight-glow"></div></div>
+    </div>
+  </nav>
+  <!-- ── DRAWER MOBILE ── -->
+  <nav class="nav-drawer" aria-label="Menu mobile">
+    <div class="nav-drawer-links">
+      <a href="index.html" data-i18n="nav_home">Accueil</a>
+      <a href="index.html#histoire" data-i18n="nav_histoire">Notre Histoire</a>
+      <a href="homme.html" data-i18n="nav_homme">Homme</a>
+      <a href="femme.html" data-i18n="nav_femme">Femme</a>
+      <a href="enfant.html" data-i18n="nav_enfant">Enfant</a>
+      <a href="nouveautes.html" data-i18n="nav_nouveautes">Nouveautés</a>
+      <a href="mesures.html" data-i18n="nav_mesures">Mesures</a>
+      <a href="ma-commande.html" data-i18n="nav_commande">Ma Commande</a>
+    </div>
+  </nav>
+  <div class="nav-overlay" aria-hidden="true"></div></div>
+
+  <!-- â•â•â• COUNTDOWN â€” Prochaine collection â•â•â• -->
+  <section class="countdown-section" style="padding-top:calc(var(--nav-height) + var(--space-12))" aria-labelledby="countdown-title">
+    <div class="container">
+      <div class="section-label" style="justify-content:center;margin-bottom:var(--space-4)">
+        <span data-i18n="nou_label">Arrivages rÃ©cents</span>
+      </div>
+      <h2 id="countdown-title" class="countdown-title" data-i18n="nou_countdown">
+        Prochaine <em>Collection</em>
+      </h2>
+      <p style="font-size:var(--text-sm);color:rgba(250,247,242,0.4);letter-spacing:0.2em;margin-bottom:var(--space-8)">Collection Hiver 2026 â€” 20 DÃ©cembre 2025</p>
+
+      <div class="countdown" role="timer" aria-label="Compte Ã  rebours avant la prochaine collection" id="countdown">
+        <div class="countdown-unit">
+          <div class="countdown-number" id="cd-jours" aria-label="Jours">--</div>
+          <div class="countdown-label">Jours</div>
+        </div>
+        <span class="countdown-sep" aria-hidden="true">:</span>
+        <div class="countdown-unit">
+          <div class="countdown-number" id="cd-heures" aria-label="Heures">--</div>
+          <div class="countdown-label">Heures</div>
+        </div>
+        <span class="countdown-sep" aria-hidden="true">:</span>
+        <div class="countdown-unit">
+          <div class="countdown-number" id="cd-minutes" aria-label="Minutes">--</div>
+          <div class="countdown-label">Minutes</div>
+        </div>
+        <span class="countdown-sep" aria-hidden="true">:</span>
+        <div class="countdown-unit">
+          <div class="countdown-number" id="cd-secondes" aria-label="Secondes">--</div>
+          <div class="countdown-label">Secondes</div>
+        </div>
+      </div>
+
+      <!-- Formulaire notification -->
+      <form onsubmit="notifierWA(event)" style="max-width:480px;margin:0 auto" aria-label="S'inscrire pour Ãªtre notifiÃ©">
+        <p style="font-size:var(--text-xs);letter-spacing:0.2em;text-transform:uppercase;color:rgba(250,247,242,0.5);margin-bottom:var(--space-4)" data-i18n="nou_notif">ÃŠtre notifiÃ© en premier</p>
+        <div class="newsletter-form">
+          <input type="email" class="newsletter-input"
+                 placeholder="Votre email ou nom"
+                 id="notif-email"
+                 aria-label="Votre email ou nom pour Ãªtre notifiÃ©">
+          <button type="submit" class="newsletter-btn">Alertez-moi</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- â•â•â• NOUVEAUTÃ‰S RÃ‰CENTES â•â•â• -->
+  <section style="padding:var(--space-20) 0;background:var(--noir)" aria-labelledby="new-prod-title">
+    <div class="container">
+      <div class="section-label reveal"><span data-i18n="new_label">Arrivages</span></div>
+      <h2 id="new-prod-title" class="section-title reveal" data-i18n="new_title" style="margin-bottom:var(--space-12)">
+        DerniÃ¨res <em>CrÃ©ations</em>
+      </h2>
+
+      <div class="products-grid" style="grid-template-columns:repeat(3,1fr)">
+
+        <!-- NouveautÃ© 1 -->
+        <article class="product-card stagger-item" data-price="2800">
+          <div class="product-card-image">
+            <img src="Femme_Caftan/caftan_11.jpg" alt="Caftan Royal BrodÃ©" loading="lazy" width="400" height="533">
+            <span class="badge-new" aria-label="Nouveau">NEW</span>
+            <div class="product-card-overlay" aria-hidden="true">
+              <div class="size-chips"><span class="size-chip">XS</span><span class="size-chip">S</span><span class="size-chip">M</span><span class="size-chip">L</span></div>
+              <div class="color-dots">
+                <span class="color-dot" title="Bordeaux Royal" style="background:#6B1A2A"></span>
+                <span class="color-dot" title="Noir Nuit"      style="background:#1a1a2e"></span>
+              </div>
+              <div class="product-card-actions">
+                <a href="product.html?id=caftan-royal" class="btn btn-outline" style="width:100%;justify-content:center;font-size:10px;padding:10px">Voir les dÃ©tails</a>
+                <a href="https://wa.me/212612653622" class="btn btn-wa" target="_blank" rel="noopener" style="width:100%;justify-content:center;font-size:10px;padding:10px">Commander</a>
+              </div>
+            </div>
+          </div>
+          <div class="product-card-info">
+            <div class="product-card-name">Caftan Royal BrodÃ©</div>
+            <div class="product-card-sub">Collection Automne 2025</div>
+            <div class="product-card-price">2 800 MAD</div>
+          </div>
+        </article>
+
+        <!-- NouveautÃ© 2 -->
+        <article class="product-card stagger-item" data-price="1900">
+          <div class="product-card-image">
+            <img src="Femme_Guendoura/guendoura_05.jpg" alt="Guendoura Festive" loading="lazy" width="400" height="533">
+            <span class="badge-new" aria-label="Nouveau">NEW</span>
+            <div class="product-card-overlay" aria-hidden="true">
+              <div class="size-chips"><span class="size-chip">S</span><span class="size-chip">M</span><span class="size-chip">L</span><span class="size-chip">XL</span></div>
+              <div class="color-dots">
+                <span class="color-dot" title="Vert Ã‰meraude" style="background:#1B5E20"></span>
+                <span class="color-dot" title="Or Antique"    style="background:#C9A96E"></span>
+              </div>
+              <div class="product-card-actions">
+                <a href="product.html" class="btn btn-outline" style="width:100%;justify-content:center;font-size:10px;padding:10px">Voir les dÃ©tails</a>
+                <a href="https://wa.me/212612653622" class="btn btn-wa" target="_blank" rel="noopener" style="width:100%;justify-content:center;font-size:10px;padding:10px">Commander</a>
+              </div>
+            </div>
+          </div>
+          <div class="product-card-info">
+            <div class="product-card-name">Guendoura Festive</div>
+            <div class="product-card-sub">Vert Ã‰meraude Â· Argent</div>
+            <div class="product-card-price">1 900 MAD</div>
+          </div>
+        </article>
+
+        <!-- NouveautÃ© 3 -->
+        <article class="product-card stagger-item" data-price="4500">
+          <div class="product-card-image">
+            <img src="Femme_Caftan/caftan_05.jpg" alt="Selham de Luxe" loading="lazy" width="400" height="533">
+            <span class="badge-new" aria-label="Nouveau">NEW</span>
+            <div class="product-card-overlay" aria-hidden="true">
+              <div class="size-chips"><span class="size-chip">S</span><span class="size-chip">M</span><span class="size-chip">L</span><span class="size-chip">XL</span></div>
+              <div class="color-dots">
+                <span class="color-dot" title="Noir Nuit" style="background:#0a0a0a;border:1px solid #333"></span>
+                <span class="color-dot" title="Caramel"   style="background:#8B5E3C"></span>
+              </div>
+              <div class="product-card-actions">
+                <a href="product.html" class="btn btn-outline" style="width:100%;justify-content:center;font-size:10px;padding:10px">Voir les dÃ©tails</a>
+                <a href="https://wa.me/212612653622" class="btn btn-wa" target="_blank" rel="noopener" style="width:100%;justify-content:center;font-size:10px;padding:10px">Commander</a>
+              </div>
+            </div>
+          </div>
+          <div class="product-card-info">
+            <div class="product-card-name">Selham de Luxe</div>
+            <div class="product-card-sub">Laine fine Â· Broderie Rabat</div>
+            <div class="product-card-price">4 500 MAD</div>
+          </div>
+        </article>
+
+        <!-- NouveautÃ© 4 -->
+        <article class="product-card stagger-item" data-price="3200">
+          <div class="product-card-image">
+            <img src="Homme_Selham/selham_06.jpg" alt="Djellaba de CÃ©rÃ©monie" loading="lazy" width="400" height="533">
+            <div class="product-card-overlay" aria-hidden="true">
+              <div class="size-chips"><span class="size-chip">XS</span><span class="size-chip">S</span><span class="size-chip">M</span><span class="size-chip">L</span><span class="size-chip">XL</span></div>
+              <div class="color-dots">
+                <span class="color-dot" title="Or Antique"   style="background:#C9A96E"></span>
+                <span class="color-dot" title="Blanc Ivoire" style="background:#FAF7F2;border:1px solid #ccc"></span>
+              </div>
+              <div class="product-card-actions">
+                <a href="product.html" class="btn btn-outline" style="width:100%;justify-content:center;font-size:10px;padding:10px">Voir les dÃ©tails</a>
+                <a href="https://wa.me/212612653622" class="btn btn-wa" target="_blank" rel="noopener" style="width:100%;justify-content:center;font-size:10px;padding:10px">Commander</a>
+              </div>
+            </div>
+          </div>
+          <div class="product-card-info">
+            <div class="product-card-name">Djellaba de CÃ©rÃ©monie</div>
+            <div class="product-card-sub">Fil d'or Â· Ã‰dition limitÃ©e</div>
+            <div class="product-card-price">3 200 MAD</div>
+          </div>
+        </article>
+
+        <!-- NouveautÃ© 5 -->
+        <article class="product-card stagger-item" data-price="2200">
+          <div class="product-card-image">
+            <img src="Femme_PretAPorter/pret_04.jpg" alt="Caftan Azur BrodÃ©" loading="lazy" width="400" height="533">
+            <div class="product-card-overlay" aria-hidden="true">
+              <div class="size-chips"><span class="size-chip">S</span><span class="size-chip">M</span><span class="size-chip">L</span></div>
+              <div class="color-dots">
+                <span class="color-dot" title="Bleu Azur" style="background:#1565C0"></span>
+              </div>
+              <div class="product-card-actions">
+                <a href="product.html" class="btn btn-outline" style="width:100%;justify-content:center;font-size:10px;padding:10px">Voir les dÃ©tails</a>
+                <a href="https://wa.me/212612653622" class="btn btn-wa" target="_blank" rel="noopener" style="width:100%;justify-content:center;font-size:10px;padding:10px">Commander</a>
+              </div>
+            </div>
+          </div>
+          <div class="product-card-info">
+            <div class="product-card-name">Caftan Azur BrodÃ©</div>
+            <div class="product-card-sub">Soie de FÃ¨s Â· Broderie main</div>
+            <div class="product-card-price">2 200 MAD</div>
+          </div>
+        </article>
+
+        <!-- NouveautÃ© 6 (Enfant) -->
+        <article class="product-card stagger-item" data-price="950">
+          <div class="product-card-image">
+            <img src="Femme_RobeCaftan/robe_03.jpg" alt="Caftan Fille Rose" loading="lazy" width="400" height="533">
+            <span class="badge-new" aria-label="Nouveau">NEW</span>
+            <div class="product-card-overlay" aria-hidden="true">
+              <div class="size-chips"><span class="size-chip">2â€“4</span><span class="size-chip">5â€“8</span><span class="size-chip">9â€“12</span></div>
+              <div class="color-dots">
+                <span class="color-dot" title="Rose PoudrÃ©" style="background:#E8B4B8"></span>
+                <span class="color-dot" title="Lilas"       style="background:#C9B8D1"></span>
+              </div>
+              <div class="product-card-actions">
+                <a href="enfant.html" class="btn btn-outline" style="width:100%;justify-content:center;font-size:10px;padding:10px">Voir la collection</a>
+                <a href="https://wa.me/212612653622" class="btn btn-wa" target="_blank" rel="noopener" style="width:100%;justify-content:center;font-size:10px;padding:10px">Commander</a>
+              </div>
+            </div>
+          </div>
+          <div class="product-card-info">
+            <div class="product-card-name">Caftan Fille Rose</div>
+            <div class="product-card-sub">Collection Enfant Â· 2â€“12 ans</div>
+            <div class="product-card-price">950 MAD</div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div style="padding:var(--space-8) 0;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:var(--space-4)">
+        <a href="index.html" style="font-family:var(--font-display);font-size:var(--text-2xl);letter-spacing:0.2em;text-transform:uppercase">Nozha<span style="color:var(--or)">.</span></a>
+        <p class="footer-copy" style="font-size:var(--text-xs);color:rgba(250,247,242,0.2)">Â© 2025 Nozha Concept</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/212612653622" class="whatsapp-float" target="_blank" rel="noopener" aria-label="Commander sur WhatsApp">
+    <svg viewBox="0 0 24 24" fill="white" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.088.537 4.048 1.475 5.754L0 24l6.428-1.467A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.848 0-3.575-.492-5.065-1.354l-.363-.214-3.765.859.876-3.667-.237-.378A9.946 9.946 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+  </a>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script src="js/translations.js"></script>
+  <script src="js/panier.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    /* â”€â”€ Compte Ã  rebours â”€â”€ */
+    const cible = new Date('2025-12-20T10:00:00');
+
+    function majCountdown() {
+      const now  = new Date();
+      const diff = cible - now;
+      if (diff <= 0) {
+        document.getElementById('countdown').innerHTML =
+          '<p style="color:var(--or);font-family:var(--font-display);font-size:2rem;font-style:italic">La collection est arrivÃ©e !</p>';
+        return;
+      }
+      const j  = Math.floor(diff / 86400000);
+      const h  = Math.floor((diff % 86400000) / 3600000);
+      const m  = Math.floor((diff % 3600000) / 60000);
+      const s  = Math.floor((diff % 60000) / 1000);
+
+      const fmt = n => String(n).padStart(2, '0');
+      document.getElementById('cd-jours').textContent    = fmt(j);
+      document.getElementById('cd-heures').textContent   = fmt(h);
+      document.getElementById('cd-minutes').textContent  = fmt(m);
+      document.getElementById('cd-secondes').textContent = fmt(s);
+    }
+
+    majCountdown();
+    setInterval(majCountdown, 1000);
+
+    /* â”€â”€ Notification WhatsApp â”€â”€ */
+    function notifierWA(e) {
+      e.preventDefault();
+      const val = document.getElementById('notif-email').value;
+      const msg = `Bonjour ! Je souhaite Ãªtre informÃ©(e) en premier de la prochaine collection Nozha Concept.\nContact : ${val || 'via WhatsApp'} ðŸŒ¹`;
+      window.open(`https://wa.me/212612653622?text=${encodeURIComponent(msg)}`, '_blank');
+      e.target.reset();
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+

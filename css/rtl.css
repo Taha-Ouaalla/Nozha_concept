@@ -1,0 +1,245 @@
+/* ============================================================
+   NOZHA CONCEPT — Styles RTL (Arabe)
+   Activé via <html dir="rtl"> ou body.rtl
+   ============================================================ */
+
+[dir="rtl"],
+body.rtl {
+  direction: rtl;
+  text-align: right;
+}
+
+/* Navbar */
+[dir="rtl"] .navbar-inner {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .navbar-links a::after {
+  left: auto;
+  right: 0;
+}
+
+[dir="rtl"] .nav-drawer {
+  right: auto;
+  left: -100%;
+  border-left: none;
+  border-right: 1px solid rgba(201,169,110,0.1);
+}
+
+[dir="rtl"] .nav-drawer.open {
+  left: 0;
+}
+
+/* Section label */
+[dir="rtl"] .section-label {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .section-label::before {
+  display: none;
+}
+
+[dir="rtl"] .section-label::after {
+  content: '';
+  display: block;
+  width: 40px;
+  height: 1px;
+  background: var(--or);
+}
+
+/* Histoire */
+[dir="rtl"] .histoire-grid {
+  direction: rtl;
+}
+
+[dir="rtl"] .histoire-text {
+  padding-right: 0;
+  padding-left: var(--space-8);
+}
+
+[dir="rtl"] .histoire-quote {
+  padding-left: 0;
+  padding-right: var(--space-6);
+  border-left: none;
+  border-right: 1px solid var(--or);
+}
+
+[dir="rtl"] .histoire-image-wrapper::before {
+  right: auto;
+  left: calc(-1 * var(--space-4));
+  right: var(--space-4);
+}
+
+/* Timeline */
+[dir="rtl"] .timeline-track::before {
+  background: linear-gradient(270deg, transparent, var(--or), transparent);
+}
+
+[dir="rtl"] .timeline-item::before {
+  left: auto;
+  right: var(--space-6);
+}
+
+/* Sidebar */
+[dir="rtl"] .category-page {
+  grid-template-columns: 1fr 260px;
+}
+
+[dir="rtl"] .sidebar {
+  border-right: none;
+  border-left: 1px solid rgba(201,169,110,0.08);
+  order: 2;
+}
+
+[dir="rtl"] .sidebar-link {
+  border-left: none;
+  border-right: 1px solid transparent;
+  padding-left: 0;
+  padding-right: var(--space-3);
+}
+
+[dir="rtl"] .sidebar-link:hover,
+[dir="rtl"] .sidebar-link.active {
+  border-left: none;
+  border-right-color: var(--or);
+  padding-left: 0;
+  padding-right: var(--space-4);
+}
+
+/* Product detail */
+[dir="rtl"] .product-detail {
+  border-left: none;
+  border-right: 1px solid rgba(201,169,110,0.08);
+}
+
+[dir="rtl"] .product-gallery {
+  direction: ltr; /* galerie reste LTR */
+}
+
+/* Accordion */
+[dir="rtl"] .accordion-header {
+  flex-direction: row-reverse;
+}
+
+/* Newsletter footer */
+[dir="rtl"] .newsletter-form {
+  flex-direction: row-reverse;
+}
+
+[dir="rtl"] .newsletter-input {
+  border-right: 1px solid rgba(201,169,110,0.2);
+  border-left: none;
+}
+
+/* Commande item */
+[dir="rtl"] .commande-item {
+  direction: rtl;
+}
+
+[dir="rtl"] .commande-item-remove {
+  order: -1;
+}
+
+/* Footer */
+[dir="rtl"] .footer-top {
+  direction: rtl;
+}
+
+[dir="rtl"] .footer-social {
+  flex-direction: row-reverse;
+}
+
+/* Boutons */
+[dir="rtl"] .btn {
+  flex-direction: row-reverse;
+}
+
+/* Cart badge */
+[dir="rtl"] .cart-badge {
+  right: auto;
+  left: -10px;
+}
+
+/* Filter bar */
+[dir="rtl"] .filter-bar {
+  flex-direction: row-reverse;
+}
+
+/* Mesures layout */
+[dir="rtl"] .mesures-layout {
+  direction: rtl;
+}
+
+[dir="rtl"] .mesure-step-body {
+  padding-left: 0;
+  padding-right: calc(60px + var(--space-4));
+}
+
+/* Countdown */
+[dir="rtl"] .countdown {
+  flex-direction: row-reverse;
+}
+
+/* ── Polices arabes (chargées si RTL actif) ── */
+@font-face {
+  font-family: 'Noto Naskh Arabic';
+  src: url('https://fonts.gstatic.com/s/notonaskharabic/v32/RrQPboN_4yJ0JmiMUW7sIGgodPSh.woff2') format('woff2');
+  font-weight: 400;
+  font-display: swap;
+}
+
+[dir="rtl"] .section-title,
+[dir="rtl"] .hero-title,
+[dir="rtl"] .histoire-quote,
+[dir="rtl"] .product-name,
+[dir="rtl"] .navbar-logo {
+  font-family: 'Noto Naskh Arabic', var(--font-display);
+  font-weight: 400;
+  line-height: 1.8;
+  letter-spacing: 0;
+}
+
+[dir="rtl"] .navbar-links a,
+[dir="rtl"] .sidebar-link,
+[dir="rtl"] .btn,
+[dir="rtl"] .product-card-name {
+  font-family: 'Noto Naskh Arabic', var(--font-body);
+  letter-spacing: 0;
+}
+
+/* ── Textes traduits en arabe — classes utilitaires ── */
+.ar-text {
+  font-family: 'Noto Naskh Arabic', var(--font-display);
+  direction: rtl;
+  letter-spacing: 0;
+  line-height: 1.8;
+}
+
+/* ── Flip éléments asymétriques ── */
+[dir="rtl"] .hero-scroll {
+  left: auto;
+  right: 50%;
+  transform: translateX(50%);
+}
+
+[dir="rtl"] .whatsapp-float {
+  right: auto;
+  left: var(--space-8);
+}
+
+@media (max-width: 768px) {
+  [dir="rtl"] .whatsapp-float {
+    left: var(--space-4);
+    right: auto;
+  }
+
+  [dir="rtl"] .category-page {
+    grid-template-columns: 1fr;
+  }
+
+  [dir="rtl"] .sidebar {
+    order: 0;
+    border-left: none;
+    border-bottom: 1px solid rgba(201,169,110,0.08);
+  }
+}

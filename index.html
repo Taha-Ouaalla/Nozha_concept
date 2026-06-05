@@ -1,0 +1,806 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <script>(function(){var t=localStorage.getItem('nozha_theme')||'light';document.documentElement.setAttribute('data-theme',t);})();</script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nozha Concept â€” Maison de couture marocaine. Caftan, guendoura, djellaba et selham de haute couture fabriquÃ©s Ã  la main par nos artisans.">
+  <meta property="og:title" content="Nozha Concept â€” L'Art du VÃªtement Marocain">
+  <meta property="og:description" content="Maison de couture marocaine, gardienne d'un savoir-faire ancestral.">
+  <title>Nozha Concept â€” L'Art du VÃªtement Marocain</title>
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+  <link rel="stylesheet" href="css/rtl.css">
+</head>
+<body>
+
+  <!-- â”€â”€ CURSEUR â”€â”€ -->
+  <div class="cursor" aria-hidden="true"></div>
+  <div class="cursor-trail" aria-hidden="true"></div>
+  <div class="cursor-label" aria-hidden="true"></div>
+
+  <!-- â”€â”€ LOADER â”€â”€ -->
+  <div id="loader" role="status" aria-label="Chargement en cours">
+    <div class="loader-logo">Nozha<span>.</span></div>
+    <div class="loader-thread" aria-hidden="true"></div>
+    <div class="loader-percent" aria-live="polite">0%</div>
+  </div>
+
+
+  <!-- ── NAVBAR TOP ── -->
+  <header class="navbar-top" role="banner">
+    <div class="navbar-inner">
+      <a href="index.html" class="navbar-logo" aria-label="Nozha Concept">Nozha<span>.</span></a>
+      <nav class="navbar-top-links" aria-label="Navigation principale">
+        <a href="index.html" data-i18n="nav_home">Accueil</a>
+        <a href="index.html#histoire" data-i18n="nav_histoire">Notre Histoire</a>
+        <a href="index.html#fondatrice" data-i18n="nav_fondatrice">Mot de la Fondatrice</a>
+      </nav>
+      <div class="navbar-actions">
+                <button class="theme-toggle" id="themeToggle" aria-label="Mode clair / sombre">
+          <svg class="icon-moon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg>
+          <svg class="icon-sun" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg>
+        </button>
+        <div class="lang-toggle" aria-label="Changer de langue">
+          <button class="lang-btn active" data-lang="fr" aria-label="Français">FR</button>
+          <span class="lang-sep">|</span>
+          <button class="lang-btn" data-lang="ar" aria-label="العربية">AR</button>
+        </div>
+        <a href="ma-commande.html" class="navbar-cart" aria-label="Ma commande">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 002 2h14a2 2 0 002-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 01-8 0"/></svg>
+          <span data-i18n="nav_commande">Ma Commande</span>
+          <span class="cart-badge" aria-label="Nombre d'articles">0</span>
+        </a>
+        <button class="burger" aria-label="Ouvrir le menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+  <!-- ── NAVBAR CATS ── -->
+  <nav class="navbar-cats" aria-label="Collections">
+    <div class="navbar-cats-inner">
+      <a href="homme.html" class="cat-link" data-cat="homme" data-i18n="nav_homme">Homme</a>
+      <a href="femme.html" class="cat-link" data-cat="femme" data-i18n="nav_femme">Femme</a>
+      <a href="enfant.html" class="cat-link" data-cat="enfant" data-i18n="nav_enfant">Enfant</a>
+      <a href="nouveautes.html" class="cat-link" data-cat="nouveautes" data-i18n="nav_nouveautes">Nouveaut&eacute;s</a>
+      <a href="lookbook.html" class="cat-link" data-cat="lookbook" data-i18n="nav_lookbook">Lookbook</a>
+      <div class="tubelight-pill" aria-hidden="true"><div class="tubelight-glow"></div></div>
+    </div>
+  </nav>
+  <!-- ── DRAWER MOBILE ── -->
+  <nav class="nav-drawer" aria-label="Menu mobile">
+    <div class="nav-drawer-links">
+      <a href="index.html" data-i18n="nav_home">Accueil</a>
+      <a href="index.html#histoire" data-i18n="nav_histoire">Notre Histoire</a>
+      <a href="homme.html" data-i18n="nav_homme">Homme</a>
+      <a href="femme.html" data-i18n="nav_femme">Femme</a>
+      <a href="enfant.html" data-i18n="nav_enfant">Enfant</a>
+      <a href="nouveautes.html" data-i18n="nav_nouveautes">Nouveautés</a>
+      <a href="mesures.html" data-i18n="nav_mesures">Mesures</a>
+      <a href="ma-commande.html" data-i18n="nav_commande">Ma Commande</a>
+    </div>
+  </nav>
+  <div class="nav-overlay" aria-hidden="true"></div></div>
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+       HÃ‰ROS
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <section class="hero" aria-label="BanniÃ¨re principale">
+    <div class="hero-bg" aria-hidden="true">
+      <img src="Femme_Caftan/caftan_01.jpg"
+           alt="Caftan marocain de haute couture"
+           loading="eager"
+           fetchpriority="high">
+    </div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+    <div class="brocade-bg" aria-hidden="true"></div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow" data-i18n="hero_eyebrow">Maison de Couture Marocaine</p>
+      <h1 class="hero-title" data-i18n="hero_title">L'Art du VÃªtement Marocain</h1>
+      <p class="hero-arabic" data-i18n="hero_arabic">ÙÙ† Ø§Ù„Ù„Ø¨Ø§Ø³ Ø§Ù„Ù…ØºØ±Ø¨ÙŠ</p>
+      <div class="hero-cta">
+        <a href="femme.html" class="btn btn-primary" data-i18n="hero_cta1">DÃ©couvrir la Collection</a>
+        <a href="https://wa.me/212612653622" class="btn btn-outline" target="_blank" rel="noopener" data-i18n="hero_cta2">Prendre Commande</a>
+      </div>
+    </div>
+
+    <div class="hero-scroll" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="hero-scroll-line"></div>
+    </div>
+  </section>
+
+
+  <!-- MOT DE LA FONDATRICE -->
+  <section class="fondatrice section-padding" id="fondatrice" aria-labelledby="fondatrice-title">
+    <div class="container">
+      <div class="fondatrice-inner">
+        <div class="fondatrice-image reveal-l">
+          <img src="Femme_Caftan/caftan_03.jpg" alt="Fondatrice Nozha Concept" loading="lazy" width="500" height="650">
+          <div class="fondatrice-image-border"></div>
+        </div>
+        <div class="fondatrice-text">
+          <div class="section-label reveal"><span data-i18n="nav_fondatrice">Mot de la Fondatrice</span></div>
+          <h2 id="fondatrice-title" class="section-title reveal" style="margin-bottom:var(--space-8)">Une <em>Vision</em>, un Héritage</h2>
+          <blockquote class="fondatrice-quote reveal">
+            <p>"Nozha Concept est née d'une conviction profonde : que la beauté du vêtement marocain mérite d'être portée au rang de l'art. Chaque fil, chaque point de broderie, chaque couleur raconte une histoire que nos artisans transmettent depuis des générations."</p>
+            <footer class="fondatrice-sig">— <strong>Nozha</strong>, Fondatrice</footer>
+          </blockquote>
+          <div class="fondatrice-signature reveal" aria-hidden="true">نزهة</div>
+          <a href="https://wa.me/212612653622" target="_blank" rel="noopener" class="btn btn-or-outline" style="margin-top:var(--space-8)">Nous contacter</a>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+       NOTRE HISTOIRE
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <section class="histoire section-padding" aria-labelledby="histoire-title">
+    <div class="container">
+      <div class="histoire-grid">
+
+        <div class="histoire-text">
+          <div class="section-label reveal-l">
+            <span data-i18n="hist_label">Notre Histoire</span>
+          </div>
+          <h2 id="histoire-title" class="section-title reveal" data-i18n="hist_title">
+            Un HÃ©ritage de <em>Savoir-Faire</em>
+          </h2>
+          <blockquote class="histoire-quote reveal" data-i18n="hist_quote">
+            "Chaque point est une promesse, chaque fil raconte une histoire vieille de siÃ¨cles."
+          </blockquote>
+          <p class="histoire-body reveal" data-i18n="hist_body">
+            Depuis notre fondation, Nozha Concept perpÃ©tue les traditions de la haute couture marocaine. Chaque piÃ¨ce est conÃ§ue Ã  la main par nos artisans, avec les matiÃ¨res les plus nobles : soie de FÃ¨s, brocart de Marrakech, broderie de SalÃ©.
+          </p>
+
+          <!-- Timeline -->
+          <div class="timeline" role="list" aria-label="Notre chronologie">
+            <div class="timeline-track">
+              <div class="timeline-item" role="listitem">
+                <div class="timeline-year">2008</div>
+                <div class="timeline-desc">Fondation de l'atelier Ã  FÃ¨s, berceau du savoir-faire.</div>
+              </div>
+              <div class="timeline-item" role="listitem">
+                <div class="timeline-year">2012</div>
+                <div class="timeline-desc">PremiÃ¨re collection caftan prÃ©sentÃ©e Ã  Casablanca.</div>
+              </div>
+              <div class="timeline-item" role="listitem">
+                <div class="timeline-year">2016</div>
+                <div class="timeline-desc">Ouverture de l'atelier de broderie spÃ©cialisÃ©.</div>
+              </div>
+              <div class="timeline-item" role="listitem">
+                <div class="timeline-year">2020</div>
+                <div class="timeline-desc">Lancement de la collection enfant et sur mesure.</div>
+              </div>
+              <div class="timeline-item" role="listitem">
+                <div class="timeline-year">2025</div>
+                <div class="timeline-desc">Nozha Concept, rÃ©fÃ©rence nationale de la couture traditionnelle.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="histoire-image-wrapper reveal-r">
+          <img src="Femme_Caftan/caftan_03.jpg"
+               alt="Artisan brodant un caftan Ã  l'atelier Nozha Concept"
+               loading="lazy"
+               width="600" height="800">
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+       NOTRE VISION
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <section class="vision section-padding" aria-labelledby="vision-title">
+    <div class="container">
+      <div class="vision-header">
+        <div class="section-label" style="justify-content:center">
+          <span data-i18n="vis_label">Notre Vision</span>
+        </div>
+        <h2 id="vision-title" class="section-title text-center" data-i18n="vis_title">
+          L'Excellence au Service de la <em>Tradition</em>
+        </h2>
+      </div>
+
+      <div class="vision-pillars">
+
+        <article class="pillar stagger-item" aria-labelledby="pil1">
+          <div class="pillar-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+              <path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6z"/>
+            </svg>
+          </div>
+          <h3 id="pil1" class="pillar-title" data-i18n="pil1_title">Artisanat</h3>
+          <p class="pillar-text" data-i18n="pil1_text">Chaque piÃ¨ce est confectionnÃ©e Ã  la main par nos maÃ®tres artisans, gardiens d'un savoir-faire ancestral.</p>
+        </article>
+
+        <article class="pillar stagger-item" aria-labelledby="pil2">
+          <div class="pillar-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+              <circle cx="12" cy="12" r="10"/>
+              <path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.72m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"/>
+            </svg>
+          </div>
+          <h3 id="pil2" class="pillar-title" data-i18n="pil2_title">ExclusivitÃ©</h3>
+          <p class="pillar-text" data-i18n="pil2_text">Des collections en Ã©dition limitÃ©e, pour vous offrir une piÃ¨ce unique qui ne se retrouvera nulle part ailleurs.</p>
+        </article>
+
+        <article class="pillar stagger-item" aria-labelledby="pil3">
+          <div class="pillar-icon" aria-hidden="true">
+            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2">
+              <path d="M3 9l9-7 9 7v11a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>
+              <polyline points="9 22 9 12 15 12 15 22"/>
+            </svg>
+          </div>
+          <h3 id="pil3" class="pillar-title" data-i18n="pil3_title">HÃ©ritage</h3>
+          <p class="pillar-text" data-i18n="pil3_text">Nous puisons notre inspiration dans l'art millÃ©naire marocain pour crÃ©er des vÃªtements qui traversent le temps.</p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+       HUB CATÃ‰GORIES
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <section class="categories section-padding" aria-labelledby="categories-title">
+    <div class="container">
+      <div class="section-label reveal">
+        <span data-i18n="cat_label">Collections</span>
+      </div>
+      <h2 id="categories-title" class="section-title reveal" data-i18n="cat_title" style="margin-bottom:var(--space-12)">
+        Explorez Notre <em>Univers</em>
+      </h2>
+
+      <div class="categories-grid">
+
+        <a href="femme.html" class="category-card" aria-label="Collection Femme">
+          <img class="category-card-img"
+               src="Femme_Caftan/caftan_06.jpg"
+               alt="Collection Femme â€” Caftan et Guendoura"
+               loading="lazy" width="600" height="900">
+          <div class="category-card-overlay" aria-hidden="true"></div>
+          <div class="category-card-content">
+            <span class="category-card-label" data-i18n="cat_femme">Femme</span>
+            <h3 class="category-card-title" data-i18n="cat_femme">Femme</h3>
+            <p class="category-card-count" data-i18n="cat_femme_sub">Caftan Â· Guendoura Â· Djellaba</p>
+          </div>
+          <div class="category-card-arrow" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </div>
+        </a>
+
+        <a href="enfant.html" class="category-card" aria-label="Collection Enfant">
+          <img class="category-card-img"
+               src="Femme_RobeCaftan/robe_02.jpg"
+               alt="Collection Enfant â€” Tenues de fÃªte"
+               loading="lazy" width="600" height="900">
+          <div class="category-card-overlay" aria-hidden="true"></div>
+          <div class="category-card-content">
+            <span class="category-card-label" data-i18n="cat_enfant">Enfant</span>
+            <h3 class="category-card-title" data-i18n="cat_enfant">Enfant</h3>
+            <p class="category-card-count" data-i18n="cat_enfant_sub">Caftan Â· Djellaba Â· FÃªte</p>
+          </div>
+          <div class="category-card-arrow" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </div>
+        </a>
+
+        <a href="nouveautes.html" class="category-card" aria-label="NouveautÃ©s">
+          <img class="category-card-img"
+               src="Femme_Guendoura/guendoura_02.jpg"
+               alt="NouveautÃ©s â€” DerniÃ¨res crÃ©ations"
+               loading="lazy" width="600" height="900">
+          <span class="badge-new" aria-label="Nouveau">NEW</span>
+          <div class="category-card-overlay" aria-hidden="true"></div>
+          <div class="category-card-content">
+            <span class="category-card-label" data-i18n="cat_new">NouveautÃ©s</span>
+            <h3 class="category-card-title" data-i18n="cat_new">NouveautÃ©s</h3>
+            <p class="category-card-count" data-i18n="cat_new_sub">Collection Automne 2025</p>
+          </div>
+          <div class="category-card-arrow" aria-hidden="true">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+              <path d="M5 12h14M12 5l7 7-7 7"/>
+            </svg>
+          </div>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+       NOUVEAUTÃ‰S CARROUSEL
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <section class="nouveautes section-padding" aria-labelledby="new-title">
+    <div class="container">
+      <div class="nouveautes-header">
+        <div>
+          <div class="section-label reveal"><span data-i18n="new_label">Arrivages</span></div>
+          <h2 id="new-title" class="section-title reveal" data-i18n="new_title">DerniÃ¨res CrÃ©ations</h2>
+        </div>
+        <a href="nouveautes.html" class="btn btn-or-outline" data-i18n="new_voir_tout">Voir tout</a>
+      </div>
+
+      <div class="nouveautes-scroll" role="region" aria-label="Carrousel nouveautÃ©s">
+        <div class="nouveautes-track">
+
+          <!-- Produit 1 -->
+          <article class="product-card" data-category="caftan" data-price="2800">
+            <div class="product-card-image">
+              <img src="Femme_Caftan/caftan_08.jpg"
+                   alt="Caftan Royal BrodÃ© â€” Collection Automne 2025"
+                   loading="lazy" width="400" height="533">
+              <span class="badge-new" aria-label="Nouveau">NEW</span>
+              <div class="product-card-overlay" aria-hidden="true">
+                <div class="size-chips" role="list" aria-label="Tailles disponibles">
+                  <span class="size-chip" role="listitem">XS</span>
+                  <span class="size-chip" role="listitem">S</span>
+                  <span class="size-chip" role="listitem">M</span>
+                  <span class="size-chip" role="listitem">L</span>
+                </div>
+                <div class="color-dots" role="list" aria-label="Couleurs disponibles">
+                  <span class="color-dot" role="listitem" title="Bordeaux Royal" style="background:#6B1A2A"></span>
+                  <span class="color-dot" role="listitem" title="Noir Nuit" style="background:#1a1a2e"></span>
+                  <span class="color-dot" role="listitem" title="Ivoire PrÃ©cieux" style="background:#E8E0D0"></span>
+                </div>
+                <div class="product-card-actions">
+                  <a href="product.html?id=caftan-royal" class="btn btn-outline" style="width:100%;justify-content:center;font-size:10px;padding:10px">
+                    Voir les dÃ©tails
+                  </a>
+                  <a href="https://wa.me/212612653622?text=Bonjour%2C+je+souhaite+commander+le+Caftan+Royal+Brod%C3%A9"
+                     class="btn btn-wa" target="_blank" rel="noopener" style="width:100%;justify-content:center;font-size:10px;padding:10px">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.088.537 4.048 1.475 5.754L0 24l6.428-1.467A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.848 0-3.575-.492-5.065-1.354l-.363-.214-3.765.859.876-3.667-.237-.378A9.946 9.946 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+                    Commander
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="product-card-info">
+              <div class="product-card-name">Caftan Royal BrodÃ©</div>
+              <div class="product-card-sub">Collection Automne 2025</div>
+              <div class="product-card-price">2 800 MAD</div>
+            </div>
+          </article>
+
+          <!-- Produit 2 -->
+          <article class="product-card" data-category="guendoura" data-price="1900">
+            <div class="product-card-image">
+              <img src="Femme_Guendoura/guendoura_04.jpg"
+                   alt="Guendoura Festive Vert Ã‰meraude"
+                   loading="lazy" width="400" height="533">
+              <span class="badge-new" aria-label="Nouveau">NEW</span>
+              <div class="product-card-overlay" aria-hidden="true">
+                <div class="size-chips">
+                  <span class="size-chip">S</span><span class="size-chip">M</span>
+                  <span class="size-chip">L</span><span class="size-chip">XL</span>
+                </div>
+                <div class="color-dots">
+                  <span class="color-dot" title="Vert Ã‰meraude" style="background:#1B5E20"></span>
+                  <span class="color-dot" title="Bordeaux" style="background:#6B1A2A"></span>
+                </div>
+                <div class="product-card-actions">
+                  <a href="product.html?id=guendoura-festive" class="btn btn-outline" style="width:100%;justify-content:center;font-size:10px;padding:10px">Voir les dÃ©tails</a>
+                  <a href="https://wa.me/212612653622?text=Bonjour%2C+je+souhaite+commander+la+Guendoura+Festive" class="btn btn-wa" target="_blank" rel="noopener" style="width:100%;justify-content:center;font-size:10px;padding:10px">
+                    Commander
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="product-card-info">
+              <div class="product-card-name">Guendoura Festive</div>
+              <div class="product-card-sub">Vert Ã‰meraude Â· Broderie argent</div>
+              <div class="product-card-price">1 900 MAD</div>
+            </div>
+          </article>
+
+          <!-- Produit 3 -->
+          <article class="product-card" data-category="djellaba" data-price="3200">
+            <div class="product-card-image">
+              <img src="Femme_PretAPorter/pret_02.jpg"
+                   alt="Djellaba de CÃ©rÃ©monie DorÃ©e"
+                   loading="lazy" width="400" height="533">
+              <div class="product-card-overlay" aria-hidden="true">
+                <div class="size-chips">
+                  <span class="size-chip">XS</span><span class="size-chip">S</span>
+                  <span class="size-chip">M</span><span class="size-chip">L</span><span class="size-chip">XL</span>
+                </div>
+                <div class="color-dots">
+                  <span class="color-dot" title="Or Antique" style="background:#C9A96E"></span>
+                  <span class="color-dot" title="Blanc Ivoire" style="background:#FAF7F2;border:1px solid #ccc"></span>
+                  <span class="color-dot" title="Bleu Royal" style="background:#1A237E"></span>
+                </div>
+                <div class="product-card-actions">
+                  <a href="product.html?id=djellaba-ceremonie" class="btn btn-outline" style="width:100%;justify-content:center;font-size:10px;padding:10px">Voir les dÃ©tails</a>
+                  <a href="https://wa.me/212612653622" class="btn btn-wa" target="_blank" rel="noopener" style="width:100%;justify-content:center;font-size:10px;padding:10px">Commander</a>
+                </div>
+              </div>
+            </div>
+            <div class="product-card-info">
+              <div class="product-card-name">Djellaba de CÃ©rÃ©monie</div>
+              <div class="product-card-sub">Fil d'or Â· Ã‰dition limitÃ©e</div>
+              <div class="product-card-price">3 200 MAD</div>
+            </div>
+          </article>
+
+          <!-- Produit 4 -->
+          <article class="product-card" data-category="caftan" data-price="2200">
+            <div class="product-card-image">
+              <img src="Femme_Caftan/caftan_09.jpg"
+                   alt="Caftan Azur BrodÃ©"
+                   loading="lazy" width="400" height="533">
+              <div class="product-card-overlay" aria-hidden="true">
+                <div class="size-chips">
+                  <span class="size-chip">XS</span><span class="size-chip">S</span>
+                  <span class="size-chip">M</span><span class="size-chip">L</span>
+                </div>
+                <div class="color-dots">
+                  <span class="color-dot" title="Bleu Azur" style="background:#1565C0"></span>
+                  <span class="color-dot" title="Turquoise" style="background:#006064"></span>
+                </div>
+                <div class="product-card-actions">
+                  <a href="product.html?id=caftan-azur" class="btn btn-outline" style="width:100%;justify-content:center;font-size:10px;padding:10px">Voir les dÃ©tails</a>
+                  <a href="https://wa.me/212612653622" class="btn btn-wa" target="_blank" rel="noopener" style="width:100%;justify-content:center;font-size:10px;padding:10px">Commander</a>
+                </div>
+              </div>
+            </div>
+            <div class="product-card-info">
+              <div class="product-card-name">Caftan Azur BrodÃ©</div>
+              <div class="product-card-sub">Soie de FÃ¨s Â· Broderie main</div>
+              <div class="product-card-price">2 200 MAD</div>
+            </div>
+          </article>
+
+          <!-- Produit 5 -->
+          <article class="product-card" data-category="selham" data-price="4500">
+            <div class="product-card-image">
+              <img src="Homme_Selham/selham_02.jpg"
+                   alt="Selham de Luxe Noir"
+                   loading="lazy" width="400" height="533">
+              <span class="badge-new" aria-label="Nouveau">NEW</span>
+              <div class="product-card-overlay" aria-hidden="true">
+                <div class="size-chips">
+                  <span class="size-chip">S</span><span class="size-chip">M</span>
+                  <span class="size-chip">L</span><span class="size-chip">XL</span>
+                </div>
+                <div class="color-dots">
+                  <span class="color-dot" title="Noir Nuit" style="background:#0a0a0a;border:1px solid #333"></span>
+                  <span class="color-dot" title="Caramel" style="background:#8B5E3C"></span>
+                </div>
+                <div class="product-card-actions">
+                  <a href="product.html?id=selham-luxe" class="btn btn-outline" style="width:100%;justify-content:center;font-size:10px;padding:10px">Voir les dÃ©tails</a>
+                  <a href="https://wa.me/212612653622" class="btn btn-wa" target="_blank" rel="noopener" style="width:100%;justify-content:center;font-size:10px;padding:10px">Commander</a>
+                </div>
+              </div>
+            </div>
+            <div class="product-card-info">
+              <div class="product-card-name">Selham de Luxe</div>
+              <div class="product-card-sub">Laine fine Â· Broderie Rabat</div>
+              <div class="product-card-price">4 500 MAD</div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+       L'ATELIER
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <section class="atelier section-padding" aria-labelledby="atelier-title">
+    <div class="container">
+      <div class="section-label reveal"><span data-i18n="atel_label">Notre Atelier</span></div>
+      <h2 id="atelier-title" class="section-title reveal" data-i18n="atel_title" style="margin-bottom:var(--space-12)">
+        Le Savoir-Faire Ã  <em>Nu</em>
+      </h2>
+
+      <div class="atelier-mosaic" aria-label="Photos de notre atelier">
+        <div class="atelier-photo">
+          <img src="Femme_Caftan/caftan_10.jpg"
+               alt="Vue d'ensemble de l'atelier de couture Nozha Concept"
+               loading="lazy" width="800" height="600">
+          <div class="atelier-photo-overlay">
+            <span style="color:var(--or);font-size:12px;letter-spacing:0.2em">Notre Savoir-Faire</span>
+          </div>
+        </div>
+        <div class="atelier-photo">
+          <img src="Femme_Guendoura/guendoura_05.jpg"
+               alt="Artisan brodant Ã  la main"
+               loading="lazy" width="400" height="300">
+          <div class="atelier-photo-overlay">
+            <span style="color:var(--or);font-size:12px;letter-spacing:0.2em">Broderie Main</span>
+          </div>
+        </div>
+        <div class="atelier-photo">
+          <img src="Femme_RobeCaftan/robe_03.jpg"
+               alt="Tissus et matiÃ¨res nobles"
+               loading="lazy" width="400" height="300">
+          <div class="atelier-photo-overlay">
+            <span style="color:var(--or);font-size:12px;letter-spacing:0.2em">MatiÃ¨res Nobles</span>
+          </div>
+        </div>
+        <div class="atelier-photo">
+          <img src="Homme_Selham/selham_04.jpg"
+               alt="Finitions sur un caftan"
+               loading="lazy" width="400" height="300">
+          <div class="atelier-photo-overlay">
+            <span style="color:var(--or);font-size:12px;letter-spacing:0.2em">Finitions</span>
+          </div>
+        </div>
+        <div class="atelier-photo">
+          <img src="Femme_PretAPorter/pret_04.jpg"
+               alt="Essayage d'une guendoura"
+               loading="lazy" width="400" height="300">
+          <div class="atelier-photo-overlay">
+            <span style="color:var(--or);font-size:12px;letter-spacing:0.2em">Essayage</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Compteurs -->
+      <div class="atelier-counters" aria-label="Nos chiffres clÃ©s">
+        <div class="counter-item">
+          <div class="counter-number" data-target="15" data-suffix="+" aria-label="Plus de 15 annÃ©es d'expÃ©rience">15+</div>
+          <div class="counter-label" data-i18n="atel_label1">AnnÃ©es d'expÃ©rience</div>
+        </div>
+        <div class="counter-item">
+          <div class="counter-number" data-target="500" data-suffix="+" aria-label="Plus de 500 piÃ¨ces crÃ©Ã©es">500+</div>
+          <div class="counter-label" data-i18n="atel_label2">PiÃ¨ces crÃ©Ã©es</div>
+        </div>
+        <div class="counter-item">
+          <div class="counter-number" data-target="12" aria-label="12 artisans maÃ®tres">12</div>
+          <div class="counter-label" data-i18n="atel_label3">Artisans maÃ®tres</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+       TÃ‰MOIGNAGES
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <section class="temoignages section-padding" aria-labelledby="temo-title">
+    <div class="container">
+      <div class="temoignages-inner">
+        <div class="section-label" style="justify-content:center;margin-bottom:var(--space-4)">
+          <span data-i18n="temo_label">Elles nous font confiance</span>
+        </div>
+        <h2 id="temo-title" class="section-title text-center" data-i18n="temo_title">La Parole de nos <em>Clientes</em></h2>
+        <div class="divider-or center" aria-hidden="true"></div>
+
+        <div class="temoignages-slider" aria-live="polite">
+
+          <div class="temoignage-item active" role="tabpanel">
+            <div class="temoignage-stars" aria-label="5 Ã©toiles">â˜…â˜…â˜…â˜…â˜…</div>
+            <blockquote class="temoignage-quote">
+              "Mon caftan Nozha Concept Ã©tait absolument splendide pour mon mariage. Chaque dÃ©tail, chaque broderieâ€¦ une Å“uvre d'art portÃ©e Ã  mÃªme la peau."
+            </blockquote>
+            <p class="temoignage-author">Fatima Z. â€” Casablanca</p>
+          </div>
+
+          <div class="temoignage-item" role="tabpanel">
+            <div class="temoignage-stars" aria-label="5 Ã©toiles">â˜…â˜…â˜…â˜…â˜…</div>
+            <blockquote class="temoignage-quote">
+              "La qualitÃ© est incomparable. J'ai commandÃ© une guendoura sur mesure et elle Ã©pouse ma silhouette comme si elle avait Ã©tÃ© faite pour moi â€” ce qui est exactement le cas."
+            </blockquote>
+            <p class="temoignage-author">Samira K. â€” Rabat</p>
+          </div>
+
+          <div class="temoignage-item" role="tabpanel">
+            <div class="temoignage-stars" aria-label="5 Ã©toiles">â˜…â˜…â˜…â˜…â˜…</div>
+            <blockquote class="temoignage-quote">
+              "Le service est impeccable et les dÃ©lais respectÃ©s. Nozha Concept incarne tout ce que la couture marocaine a de plus noble et de plus raffinÃ©."
+            </blockquote>
+            <p class="temoignage-author">Leila M. â€” FÃ¨s</p>
+          </div>
+
+        </div>
+
+        <div class="slider-dots" role="tablist" aria-label="Navigation tÃ©moignages">
+          <button class="dot active" role="tab" aria-label="TÃ©moignage 1"></button>
+          <button class="dot" role="tab" aria-label="TÃ©moignage 2"></button>
+          <button class="dot" role="tab" aria-label="TÃ©moignage 3"></button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+       INSTAGRAM
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <section class="instagram section-padding-sm" aria-labelledby="insta-title">
+    <div class="container">
+      <div class="section-label text-center" style="justify-content:center;margin-bottom:var(--space-3)">
+        <span data-i18n="insta_label">Instagram</span>
+      </div>
+      <h2 id="insta-title" class="section-title text-center" data-i18n="insta_title">Notre Atelier en <em>Images</em></h2>
+
+      <div class="insta-grid" aria-label="Galerie Instagram" role="list">
+        <div class="insta-item" role="listitem">
+          <img src="Femme_Caftan/caftan_11.jpg" alt="Photo atelier 1" loading="lazy" width="300" height="300">
+          <div class="insta-overlay" aria-hidden="true">
+            <span class="insta-heart">â™¥</span>
+            <span class="insta-likes">342</span>
+          </div>
+        </div>
+        <div class="insta-item" role="listitem">
+          <img src="Femme_Guendoura/guendoura_01.jpg" alt="Photo atelier 2" loading="lazy" width="300" height="300">
+          <div class="insta-overlay" aria-hidden="true">
+            <span class="insta-heart">â™¥</span>
+            <span class="insta-likes">518</span>
+          </div>
+        </div>
+        <div class="insta-item" role="listitem">
+          <img src="Homme_Selham/selham_05.jpg" alt="Photo caftan 3" loading="lazy" width="300" height="300">
+          <div class="insta-overlay" aria-hidden="true">
+            <span class="insta-heart">â™¥</span>
+            <span class="insta-likes">891</span>
+          </div>
+        </div>
+        <div class="insta-item" role="listitem">
+          <img src="Femme_RobeCaftan/robe_04.jpg" alt="Photo guendoura 4" loading="lazy" width="300" height="300">
+          <div class="insta-overlay" aria-hidden="true">
+            <span class="insta-heart">â™¥</span>
+            <span class="insta-likes">1.2K</span>
+          </div>
+        </div>
+        <div class="insta-item" role="listitem">
+          <img src="Femme_Caftan/caftan_04.jpg" alt="Photo djellaba 5" loading="lazy" width="300" height="300">
+          <div class="insta-overlay" aria-hidden="true">
+            <span class="insta-heart">â™¥</span>
+            <span class="insta-likes">673</span>
+          </div>
+        </div>
+        <div class="insta-item" role="listitem">
+          <img src="Femme_PretAPorter/pret_01.jpg" alt="Photo broderie 6" loading="lazy" width="300" height="300">
+          <div class="insta-overlay" aria-hidden="true">
+            <span class="insta-heart">â™¥</span>
+            <span class="insta-likes">445</span>
+          </div>
+        </div>
+      </div>
+
+      <div style="text-align:center;margin-top:var(--space-8)">
+        <a href="https://instagram.com/nozha.concept" target="_blank" rel="noopener"
+           class="btn btn-or-outline" data-i18n="insta_cta">Suivez notre atelier</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•
+       FOOTER
+  â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â•â• -->
+  <footer class="footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-top">
+
+        <div class="footer-brand">
+          <div class="footer-logo">Nozha<span>.</span></div>
+          <p class="footer-tagline-ar" aria-label="Khiyata tahki tariikha â€” La broderie raconte une histoire" data-i18n="footer_ar">Ø®ÙŠØ§Ø·Ø© ØªØ­ÙƒÙŠ ØªØ§Ø±ÙŠØ®Ù‹Ø§</p>
+          <p class="footer-desc" data-i18n="footer_desc">
+            Maison de couture marocaine, gardienne d'un savoir-faire ancestral. Chaque piÃ¨ce est une Å“uvre d'art vivante.
+          </p>
+          <nav class="footer-social" aria-label="RÃ©seaux sociaux">
+            <a href="https://instagram.com/nozha.concept" target="_blank" rel="noopener" aria-label="Instagram Nozha Concept">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="17.5" cy="6.5" r="1.5" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="https://wa.me/212612653622" target="_blank" rel="noopener" aria-label="WhatsApp Nozha Concept">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.088.537 4.048 1.475 5.754L0 24l6.428-1.467A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.848 0-3.575-.492-5.065-1.354l-.363-.214-3.765.859.876-3.667-.237-.378A9.946 9.946 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+            </a>
+            <a href="https://tiktok.com/@nozha.concept" target="_blank" rel="noopener" aria-label="TikTok Nozha Concept">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 01-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 01-2.88 2.5 2.89 2.89 0 01-2.89-2.89 2.89 2.89 0 012.89-2.89c.28 0 .54.04.79.1V9.01a6.33 6.33 0 00-.79-.05 6.34 6.34 0 00-6.34 6.34 6.34 6.34 0 006.34 6.34 6.34 6.34 0 006.33-6.34V8.73a8.2 8.2 0 004.77 1.5V6.75a4.85 4.85 0 01-1-.06z"/></svg>
+            </a>
+          </nav>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer_col_nav">Navigation</h4>
+          <ul>
+            <li><a href="index.html"      data-i18n="nav_home">Accueil</a></li>
+            <li><a href="femme.html"      data-i18n="nav_femme">Femme</a></li>
+            <li><a href="enfant.html"     data-i18n="nav_enfant">Enfant</a></li>
+            <li><a href="nouveautes.html" data-i18n="nav_nouveautes">NouveautÃ©s</a></li>
+            <li><a href="mesures.html"    data-i18n="nav_mesures">Mesures</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer_col_coll">Collections</h4>
+          <ul>
+            <li><a href="femme.html#caftan">Caftan</a></li>
+            <li><a href="femme.html#guendoura">Guendoura</a></li>
+            <li><a href="femme.html#djellaba">Djellaba</a></li>
+            <li><a href="femme.html#selham">Selham</a></li>
+            <li><a href="enfant.html">Collection Enfant</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4 data-i18n="footer_col_info">Informations</h4>
+          <ul>
+            <li><a href="mesures.html">Guide des mesures</a></li>
+            <li><a href="ma-commande.html">Ma commande</a></li>
+            <li><a href="https://wa.me/212612653622" target="_blank" rel="noopener">Nous contacter</a></li>
+          </ul>
+          <form class="newsletter-form" style="margin-top:var(--space-6)" aria-label="Inscription newsletter" onsubmit="handleNewsletter(event)">
+            <input type="email" class="newsletter-input"
+                   placeholder="Votre adresse email"
+                   data-i18n-ph="footer_nl_ph"
+                   aria-label="Votre adresse email" required>
+            <button type="submit" class="newsletter-btn" data-i18n="footer_nl_btn">S'inscrire</button>
+          </form>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p class="footer-copy" data-i18n="footer_copy">Â© 2025 Nozha Concept. Tous droits rÃ©servÃ©s.</p>
+        <p class="footer-copy" style="opacity:0.4">Fait avec â™¥ au Maroc</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- â”€â”€ WhatsApp flottant â”€â”€ -->
+  <a href="https://wa.me/212612653622"
+     class="whatsapp-float"
+     target="_blank"
+     rel="noopener"
+     aria-label="Nous contacter sur WhatsApp">
+    <svg viewBox="0 0 24 24" fill="white" aria-hidden="true">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
+      <path d="M12 0C5.373 0 0 5.373 0 12c0 2.088.537 4.048 1.475 5.754L0 24l6.428-1.467A11.95 11.95 0 0012 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.848 0-3.575-.492-5.065-1.354l-.363-.214-3.765.859.876-3.667-.237-.378A9.946 9.946 0 012 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
+    </svg>
+  </a>
+
+  <!-- Scripts GSAP CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+
+  <!-- Scripts app -->
+  <script src="js/translations.js"></script>
+  <script src="js/panier.js"></script>
+  <script src="js/main.js"></script>
+
+  <script>
+    /* Newsletter â†’ WhatsApp */
+    function handleNewsletter(e) {
+      e.preventDefault();
+      const email = e.target.querySelector('input[type="email"]').value;
+      const lang  = window.NozhaI18n?.currentLang() || 'fr';
+      const tr    = window.NozhaI18n?.translations[lang];
+      const msg   = tr?.wa_newsletter
+        ? tr.wa_newsletter(email)
+        : `Bonjour ! Je souhaite m'inscrire Ã  la newsletter Nozha Concept.\nEmail : ${email} ðŸŒ¹`;
+      window.open(`https://wa.me/212612653622?text=${encodeURIComponent(msg)}`, '_blank');
+      e.target.reset();
+    }
+  </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
