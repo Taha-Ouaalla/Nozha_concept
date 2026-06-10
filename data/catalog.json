@@ -1,0 +1,314 @@
+{
+  "femme": {
+    "caftan": [
+      {
+        "id": "femme-caftan-caftan-bordeaux-royal",
+        "nom": "Caftan Bordeaux Royal",
+        "photos": [
+          "produits/femme/caftan/caftan-bordeaux-royal/01.jpg"
+        ],
+        "description": "Caftan bordeaux en velours de soie, broderies dorées sur toute la longueur. Pièce de collection.",
+        "prix": 3200
+      },
+      {
+        "id": "femme-caftan-caftan-cerise-malia",
+        "nom": "Caftan Cerise Malia",
+        "photos": [
+          "produits/femme/caftan/caftan-cerise-malia/01.jpg"
+        ],
+        "description": "Caftan cerise en tissu malia, broderie corail main sur devant et bas. Caractère et féminité.",
+        "prix": 2100
+      },
+      {
+        "id": "femme-caftan-caftan-emeraude",
+        "nom": "Caftan Emeraude",
+        "photos": [
+          "produits/femme/caftan/caftan-emeraude/01.jpg"
+        ],
+        "description": "Caftan vert émeraude en taffetas de soie, ceinture dorée amovible. Eclat et modernité.",
+        "prix": 2200
+      },
+      {
+        "id": "femme-caftan-caftan-indigo-safa",
+        "nom": "Caftan Indigo Safa",
+        "photos": [
+          "produits/femme/caftan/caftan-indigo-safa/01.jpg"
+        ],
+        "description": "Caftan indigo avec broderie safa traditionnelle en fil argent. Le mariage du classique et du précieux.",
+        "prix": 2900
+      },
+      {
+        "id": "femme-caftan-caftan-ivoire-brode",
+        "nom": "Caftan Ivoire Brode",
+        "photos": [
+          "produits/femme/caftan/caftan-ivoire-brode/01.jpg"
+        ],
+        "description": "Caftan ivoire en mousseline double, broderie artisanale safa sur poitrine et bas. Raffinement intemporel.",
+        "prix": 2600
+      },
+      {
+        "id": "femme-caftan-caftan-marine-printemps",
+        "nom": "Caftan Marine Printemps",
+        "photos": [
+          "produits/femme/caftan/caftan-marine-printemps/01.jpg"
+        ],
+        "description": "Caftan marine en crêpe fleuri, broderies légères en fil de coton blanc. Légèreté printanière.",
+        "prix": 1900
+      },
+      {
+        "id": "femme-caftan-caftan-noir-ceremonie",
+        "nom": "Caftan Noir Ceremonie",
+        "photos": [
+          "produits/femme/caftan/caftan-noir-ceremonie/01.jpg"
+        ],
+        "description": "Caftan noir de cérémonie en velours, broderies argentées et dorées. Pour les grandes occasions.",
+        "prix": 3400
+      },
+      {
+        "id": "femme-caftan-caftan-nude-luxe",
+        "nom": "Caftan Nude Luxe",
+        "photos": [
+          "produits/femme/caftan/caftan-nude-luxe/01.jpg"
+        ],
+        "description": "Caftan nude en satin duchesse, fermeture dissimulée, broderie discerète sur poitrine. Pure élégance.",
+        "prix": 3100
+      },
+      {
+        "id": "femme-caftan-caftan-rose-poudre",
+        "nom": "Caftan Rose Poudre",
+        "photos": [
+          "produits/femme/caftan/caftan-rose-poudre/01.jpg"
+        ],
+        "description": "Caftan en crêpe soyeux rose poudré, encolure brodée de perles nacrées. Coupe fluide et élégante.",
+        "prix": 2400
+      },
+      {
+        "id": "femme-caftan-caftan-royal-dore",
+        "nom": "Caftan Royal Dore",
+        "photos": [
+          "produits/femme/caftan/caftan-royal-dore/01.jpg"
+        ],
+        "description": "Caftan de cérémonie en soie de Fès, broderie filée or à la main. Silhouette princesse, taille marquée.",
+        "prix": 2800
+      },
+      {
+        "id": "femme-caftan-caftan-sable-or",
+        "nom": "Caftan Sable Or",
+        "photos": [
+          "produits/femme/caftan/caftan-sable-or/01.jpg"
+        ],
+        "description": "Caftan en soie sable, motifs géométriques brodés or. Inspiration palais andalou.",
+        "prix": 2700
+      }
+    ],
+    "guendoura": [
+      {
+        "id": "femme-guendoura-guendoura-berbere-classique",
+        "nom": "Guendoura Berbere Classique",
+        "photos": [
+          "produits/femme/guendoura/guendoura-berbere-classique/01.jpg"
+        ],
+        "description": "Guendoura berbère en laine fine mérinos, broderies tirazi multicolores sur col et manches. Âme du Moyen Atlas.",
+        "prix": 1800
+      },
+      {
+        "id": "femme-guendoura-guendoura-brode-or",
+        "nom": "Guendoura Brode Or",
+        "photos": [
+          "produits/femme/guendoura/guendoura-brode-or/01.jpg"
+        ],
+        "description": "Guendoura en drap fin ivoire, broderie intégrale fil d'or mat. Pièce artisanale d'exception.",
+        "prix": 2600
+      },
+      {
+        "id": "femme-guendoura-guendoura-marine-brode",
+        "nom": "Guendoura Marine Brode",
+        "photos": [
+          "produits/femme/guendoura/guendoura-marine-brode/01.jpg"
+        ],
+        "description": "Guendoura marine en velours léger, broderies dorées sur toute la longueur. Sobriété et caractère.",
+        "prix": 2000
+      },
+      {
+        "id": "femme-guendoura-guendoura-rose-atlas",
+        "nom": "Guendoura Rose Atlas",
+        "photos": [
+          "produits/femme/guendoura/guendoura-rose-atlas/01.jpg"
+        ],
+        "description": "Guendoura rose pâle en coton doux, motifs berbères brodés en rouge et noir. Douceur et tradition.",
+        "prix": 1600
+      },
+      {
+        "id": "femme-guendoura-guendoura-satin-fes",
+        "nom": "Guendoura Satin Fes",
+        "photos": [
+          "produits/femme/guendoura/guendoura-satin-fes/01.jpg"
+        ],
+        "description": "Guendoura fassi en satin, broderies dorées sur col en V et ceinture. Raffinement de l'ancienne médina.",
+        "prix": 2200
+      }
+    ],
+    "pret-a-porter": [
+      {
+        "id": "femme-pret-a-porter-pret-casual-terracotta",
+        "nom": "Pret Casual Terracotta",
+        "photos": [
+          "produits/femme/pret-a-porter/pret-casual-terracotta/01.jpg"
+        ],
+        "description": "Ensemble pantalon large et tunique en lin terracotta. Confort absolu, style contemporain modeste.",
+        "prix": 850
+      },
+      {
+        "id": "femme-pret-a-porter-pret-hijab-friendly-kaki",
+        "nom": "Pret Hijab Friendly Kaki",
+        "photos": [
+          "produits/femme/pret-a-porter/pret-hijab-friendly-kaki/01.jpg"
+        ],
+        "description": "Longue robe kaki oversize à manches longues, taille élastique. Parfaite pour le quotidien.",
+        "prix": 780
+      },
+      {
+        "id": "femme-pret-a-porter-pret-modeste-cr-me",
+        "nom": "Pret Modeste CrèMe",
+        "photos": [
+          "produits/femme/pret-a-porter/pret-modeste-crème/01.jpg"
+        ],
+        "description": "Ensemble deux pièces oversize en crêpe, découpe moderne. Pratique, décent et stylé au quotidien.",
+        "prix": 950
+      },
+      {
+        "id": "femme-pret-a-porter-pret-satin-soiree",
+        "nom": "Pret Satin Soiree",
+        "photos": [
+          "produits/femme/pret-a-porter/pret-satin-soiree/01.jpg"
+        ],
+        "description": "Robe longue en satin doux, col discret, manches trois quarts. Du chic sans compromis.",
+        "prix": 1100
+      }
+    ],
+    "robe-caftan": [
+      {
+        "id": "femme-robe-caftan-robe-caftan-ivoire",
+        "nom": "Robe Caftan Ivoire",
+        "photos": [
+          "produits/femme/robe-caftan/robe-caftan-ivoire/01.jpg"
+        ],
+        "description": "Robe-caftan ivoire mi-longue en soie italienne, broderies légères sur col et ourlet. Fusion chaleureuse.",
+        "prix": 1600
+      },
+      {
+        "id": "femme-robe-caftan-robe-caftan-miel",
+        "nom": "Robe Caftan Miel",
+        "photos": [
+          "produits/femme/robe-caftan/robe-caftan-miel/01.jpg"
+        ],
+        "description": "Robe-caftan en mousseline miel, impression florale orientale. Entre tradition et contemporain.",
+        "prix": 1400
+      },
+      {
+        "id": "femme-robe-caftan-robe-caftan-noir",
+        "nom": "Robe Caftan Noir",
+        "photos": [
+          "produits/femme/robe-caftan/robe-caftan-noir/01.jpg"
+        ],
+        "description": "Robe-caftan noire all-season en crêpe texturé, broderies discrete sur col. Élégance intemporelle.",
+        "prix": 1700
+      },
+      {
+        "id": "femme-robe-caftan-robe-caftan-prune",
+        "nom": "Robe Caftan Prune",
+        "photos": [
+          "produits/femme/robe-caftan/robe-caftan-prune/01.jpg"
+        ],
+        "description": "Robe-caftan prune en velours souple, ceinture à nouer, broderies dorées. Moderne et authentique.",
+        "prix": 1800
+      }
+    ]
+  },
+  "homme": {
+    "djellaba": [],
+    "selham": [
+      {
+        "id": "homme-selham-selham-beige-atlas",
+        "nom": "Selham Beige Atlas",
+        "photos": [
+          "produits/homme/selham/selham-beige-atlas/01.jpg"
+        ],
+        "description": "Selham en laine d'Atlas filée main, tons beige naturel. Authenticité brute et artisanat vivant.",
+        "prix": 1700
+      },
+      {
+        "id": "homme-selham-selham-blanc-caid",
+        "nom": "Selham Blanc Caid",
+        "photos": [
+          "produits/homme/selham/selham-blanc-caid/01.jpg"
+        ],
+        "description": "Selham blanc immaculé en laine vierge, galons dorés. Tenue de cérémonie de prestige.",
+        "prix": 2200
+      },
+      {
+        "id": "homme-selham-selham-bordeaux-royal",
+        "nom": "Selham Bordeaux Royal",
+        "photos": [
+          "produits/homme/selham/selham-bordeaux-royal/01.jpg"
+        ],
+        "description": "Selham bordeaux en velours, broderies noires. Pièce de collection pour occasions spéciales.",
+        "prix": 2000
+      },
+      {
+        "id": "homme-selham-selham-camel-luxe",
+        "nom": "Selham Camel Luxe",
+        "photos": [
+          "produits/homme/selham/selham-camel-luxe/01.jpg"
+        ],
+        "description": "Selham camel en laine premium, broderies beiges sur capuche et devant. Chaleur et prestance.",
+        "prix": 1800
+      },
+      {
+        "id": "homme-selham-selham-gris-anthracite",
+        "nom": "Selham Gris Anthracite",
+        "photos": [
+          "produits/homme/selham/selham-gris-anthracite/01.jpg"
+        ],
+        "description": "Selham gris anthracite en laine mélangée, finitions soignées. Entre sobriété et élégance.",
+        "prix": 1500
+      },
+      {
+        "id": "homme-selham-selham-marine-moderne",
+        "nom": "Selham Marine Moderne",
+        "photos": [
+          "produits/homme/selham/selham-marine-moderne/01.jpg"
+        ],
+        "description": "Selham marine en tissu technique imperméable, capuche ajustable. Tradition revisitée pour l'homme actif.",
+        "prix": 1600
+      },
+      {
+        "id": "homme-selham-selham-noir-classique",
+        "nom": "Selham Noir Classique",
+        "photos": [
+          "produits/homme/selham/selham-noir-classique/01.jpg"
+        ],
+        "description": "Selham traditionnel en drap fin noir, capuche bordée velours. Le classique absolu du vestiaire masculin marocain.",
+        "prix": 1400
+      }
+    ]
+  },
+  "enfants": {
+    "caftan": [],
+    "djellaba": []
+  },
+  "nouveautes": [],
+  "flash-sales": {
+    "enfants": {
+      "caftan": []
+    },
+    "femme": {
+      "caftan": [],
+      "guendoura": []
+    },
+    "homme": {
+      "selham": []
+    }
+  },
+  "generated_at": "2026-06-10T23:25:04.602Z"
+}
