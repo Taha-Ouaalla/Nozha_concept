@@ -226,7 +226,6 @@
     ]
   },
   "homme": {
-    "djellaba": [],
     "selham": [
       {
         "id": "homme-selham-selham-beige-atlas",
@@ -293,22 +292,8 @@
       }
     ]
   },
-  "enfants": {
-    "caftan": [],
-    "djellaba": []
-  },
+  "enfants": {},
   "nouveautes": [],
-  "flash-sales": {
-    "enfants": {
-      "caftan": []
-    },
-    "femme": {
-      "caftan": [],
-      "guendoura": []
-    },
-    "homme": {
-      "selham": []
-    }
-  },
-  "generated_at": "2026-06-10T23:25:04.602Z"
+  "flash-sales": {},
+  "generated_at": "2026-06-10T23:38:40.747Z"
 }
