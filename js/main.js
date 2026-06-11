@@ -26,6 +26,8 @@ document.addEventListener('DOMContentLoaded', () => {
   initPageTransition();
   splitHeroText();
   initTheme();
+  initScrollProgress();
+  initImageFade();
 });
 
 /* ============================================================
@@ -63,9 +65,9 @@ function initLoader() {
    CURSEUR PERSONNALIS�
    ============================================================ */
 function initCursor() {
-  /* D�sactiv� sur touch/mobile */
-  if ('ontouchstart' in window || navigator.maxTouchPoints > 1) return;
-  if (window.innerWidth <= 768) return;
+  /* Désactivé sur touch/mobile — restaure le curseur natif */
+  if ('ontouchstart' in window || navigator.maxTouchPoints > 1) { document.body.style.cursor='auto'; return; }
+  if (window.innerWidth <= 768) { document.body.style.cursor='auto'; return; }
 
   const cursor = document.querySelector('.cursor');
   const trail  = document.querySelector('.cursor-trail');
@@ -78,7 +80,7 @@ function initCursor() {
 
   /* -- Positionnement via transform pur (GPU, sans left/top) -- */
   function setCursor(x, y) {
-    cursor.style.transform = `translate(${x - 5}px, ${y - 5}px)`;
+    cursor.style.transform = `translate(${x - 7}px, ${y - 7}px)`;
   }
   function setTrail(x, y) {
     trail.style.transform = `translate(${x - 19}px, ${y - 19}px)`;
@@ -792,3 +794,36 @@ function initTheme() {
   });
 }
 
+
+/* ============================================================
+   SCROLL PROGRESS BAR
+   ============================================================ */
+function initScrollProgress() {
+  const bar = document.createElement('div');
+  bar.id = 'scroll-progress';
+  document.body.prepend(bar);
+  window.addEventListener('scroll', () => {
+    const total  = document.documentElement.scrollHeight - window.innerHeight;
+    const pct    = total > 0 ? (window.scrollY / total) * 100 : 0;
+    bar.style.width = pct + '%';
+  }, { passive: true });
+}
+
+/* ============================================================
+   IMAGE LAZY FADE
+   ============================================================ */
+function initImageFade() {
+  const imgs = document.querySelectorAll('img[loading="lazy"]');
+  imgs.forEach(img => {
+    if (!img.complete) {
+      img.classList.add('img-loading');
+      img.addEventListener('load', () => img.classList.replace('img-loading','img-loaded'));
+      img.addEventListener('error', () => img.classList.remove('img-loading'));
+    }
+  });
+  // Hero images — subtle Ken Burns on load
+  document.querySelectorAll('.hero-bg img, .page-hero-bg img').forEach(img => {
+    if (img.complete) { img.classList.add('loaded'); }
+    else { img.addEventListener('load', () => img.classList.add('loaded')); }
+  });
+}
